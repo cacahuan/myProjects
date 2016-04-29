@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>-caca</title>
+
+		<style type="text/css">
+			body{background:#000;}
+			#main{width:100%;height:440px;position:relative;
+				-webkit-transform-style:preserve-3d;-webkit-perspective:800px;}
+			#main img{width:330px;height:280px;position:absolute;padding:10px;
+					-webkit-box-reflect:below 0 -webkit-linear-gradient(top,rgba(0,0,0,1),rgba(0,0,0,0));-webkit-transition:.6s;}
+			#main img:nth-child(1){left:0px;}
+			#main img:nth-child(2){left:200px;}
+			#main img:nth-child(3){left:400px;}
+			#main img:nth-child(4){left:600px;}
+			#main img:nth-child(5){left:800px;}
+			#main img:nth-child(6){left:1000px;}
+			#main img:nth-child(7){left:1200px;}
+			#main img:nth-child(8){left:1400px;}
+			#main img:nth-child(9){left:1600px;}
+			
+			
+
+			#main .left{-webkit-transform:translateZ(-50px) rotateY(45deg);}
+			#main .now{-webkit-transform:translateZ(150px);}
+			#main .right{-webkit-transform:translateZ(-50px) rotateY(-45deg);}
+		</style> 
+	</head>
+
+<body>
+	<div id="main">
+		
+		<img src="img/1.jpg" class="left"/>
+		<img src="img/2.jpg" class="left"/>
+		<img src="img/3.jpg" class="left"/>
+		<img src="img/4.jpg" class="left"/>
+		<img src="img/5.jpg" class="now"/>
+		<img src="img/6.jpg" class="right"/>
+		<img src="img/7.jpg" class="right"/>
+		<img src="img/8.jpg" class="right"/>
+		<img src="img/9.jpg" class="right"/>
+	</div>
+
+	<!--JS动画部分-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		//定义一个数组，存放照片序号
+		var imgL=[];
+		var lIndex=4;
+		//定义变量imgL，先设置值为2，即中间那张图片，用for循环
+		
+		for(var i=0;i<9;i++){
+			//parseInt:拿取字符串中的数字部分
+			imgL[i]=parseInt($("img").eq(i).css("left"));
+		}
+		//alert(imgL);
+		//	点击执行下面事件
+		$("#main img").click(function(){
+			var nIndex=$(this).index();
+			//alert(nIndex);
+			for(var i=0;i<9;i++){
+				imgL[i]=imgL[i]-(nIndex-lIndex)*200;
+				$("img").eq(i).css("left",imgL[i]+"px");
+			};
+
+			for(var i=0;i<nIndex;i++){
+				$("img").eq(i).removeClass().addClass("left");
+			}
+				
+			for(var i=nIndex;i<9;i++){
+				$("img").eq(i).removeClass().addClass("right");
+			}
+				$(this).removeClass().addClass("now");
+			lIndex=nIndex;
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>-caca</title>
+
+		<style type="text/css">
+		*{margin:0;padding:0;}
+		.nav{width:100%;height:60px;background:url("img/13.jpg");border-bottom:1px solid #717171;}
+		.nav .nav_left li{width:60px;height:40px;list-style:none;float:left;padding:5px;margin:5px;
+						  font-size:20px;text-align:center;line-height:40px;cursor:pointer;}
+		.nav .nav_left li:hover{background:rgba(133,240,90,.6);}
+		.nav .nav_mid{width:60px;height:40px;float:left;position:absolute;top:15px;left:550px;}
+		.nav .nav_right li{width:60px;height:40px;#c0c0c0;list-style:none;float:right;padding:5px;margin:5px;
+						 font-size:20px;text-align:center;line-height:40px;cursor:pointer;}
+		.nav .nav_right li:hover{background:rgba(133,240,90,.6);}
+
+		.left-nav{width:250px;height:220px;position:absolute;top:91px;left:10px;}
+		.left-nav .left-nav_left{width:120px;height:140px;background:#fff;cursor:pointer;}
+		.left-nav .left-nav_left img{padding:2px;}
+		.left-nav .left-nav_right{width:120px;height:140px;float:right;margin-top:-139px;background:url("img/13.jpg");}
+		.left-nav .left-nav_right ul li{list-style:none;font-size:15px;line-height:45px;text-align:center;cursor:pointer;}
+		.left-nav .left-nav_right ul li:hover{background:rgba(119,283,190,.5);}
+		.right-nav{width:240px;height:50px;position:absolute;top:91px;right:10px;background:url("img/13.jpg");}
+		.right-nav ul li{list-style:none;font-size:15px;text-align:center;line-height:26px;float:left;cursor:pointer;padding:12px;}
+		.right-nav ul li:hover{background:rgba(119,283,190,.5);}
+
+		#main{width:874px;height:735px;background:cyan;margin:30px auto;}
+		#main ul li{width:274px;height:225px;background:#fff;list-style-type:none;float:left;margin:11px auto auto 9px;padding:3px;cursor:pointer;}
+		.gray{width:100%;height:100%;background:rgba(0,0,0,.6);position:fixed;top:0;left:0;display:none;}
+		.bigbox{width:500px;height:420px;background:#fff;position:absolute;top:100px;left:470px;display:none;}
+		.bigbox img{margin:7px;}
+		.bigbox .bigbox_left{width:40px;height:40px;background:rgba(14,197,147,.4);position:absolute;
+		 top:190px;left:-50px;font-size:25px;color:#000;line-height:40px;text-align:center;}
+		 .bigbox_left:hover{background:rgba(14,197,147,.6);cursor:pointer;}
+		.bigbox .bigbox_right{width:40px;height:40px;color:#000;background:rgba(14,197,147,.4);position:absolute;
+		 top:190px;right:-50px;font-size:25px;line-height:40px;text-align:center;}
+		 .bigbox_right:hover{background:rgba(14,197,147,.6);cursor:pointer;}
+
+		</style>
+	</head>
+<body>
+<!--上面导航条开始-->
+	<div class="nav">
+		<ul class="nav_left">
+			<li>相册</li>
+			<li>照片</li>
+			<li>视频</li>
+		</ul>
+		<!--音乐播放器，autoplay:自动播放，controls:播放控件-->
+		<ul class="nav_mid">
+			<audio autoplay controls id="music" >
+			<source src="music/1.mp3" type="audio/mp3">
+		</ul>
+		<ul class="nav_right">
+			<li>应用</li>
+			<li>设置</li>
+			<li>回收站</li>
+		</ul>
+	</div>
+	<!--上面导航条结束-->
+	<!--左侧导航条开始-->
+		<div class="left-nav">
+			<div class="left-nav_left"><img src="img/1.jpg" width="115" height="135"/></div>
+			<div class="left-nav_right">
+				<ul>
+					<li>myself</li>
+					<li>上传照片</li>
+					<li>批量管理</li>
+				</ul>
+			</div>
+		</div>
+	<!--左侧导航条结束-->
+	<!--右侧导航条开始-->
+		<div class="right-nav">
+			<ul>
+				<li>访客 </li>
+				<li>评论 </li>
+				<li>取消赞</li>
+				<li>更多</li>
+			</ul>
+		</div>
+	<!--右侧导航条结束-->
+<!--图片区域开始-->
+	<div id="main">
+		<ul>
+			<li><img src="img/1.jpg" width="272" height="222" bigsrc="img/1.jpg"/></li>
+			<li><img src="img/2.jpg" width="272" height="222" bigsrc="img/2.jpg"/></li>
+			<li><img src="img/3.jpg" width="272" height="222" bigsrc="img/3.jpg"/></li>
+			<li><img src="img/4.jpg" width="272" height="222" bigsrc="img/4.jpg"/></li>
+			<li><img src="img/5.jpg" width="272" height="222" bigsrc="img/5.jpg"/></li>
+			<li><img src="img/6.jpg" width="272" height="222" bigsrc="img/6.jpg"/></li>
+			<li><img src="img/7.jpg" width="272" height="222" bigsrc="img/7.jpg"/></li>
+			<li><img src="img/8.jpg" width="272" height="222" bigsrc="img/8.jpg"/></li>
+			<li><img src="img/9.jpg" width="272" height="222" bigsrc="img/9.jpg"/></li>
+		</ul>
+	</div>
+<!--图片区域结束-->
+<!--背景阴影区域开始-->
+	<div class="gray"></div>
+<!--背景阴影区域结束-->
+<!--中间大图片展示开始-->
+	<div class="bigbox">
+		<img src="img/1.jpg" class='bigImg'>
+		<!--左右小图标开始-->
+		<div class="bigbox_left">&lt;</div> 
+		<div class="bigbox_right">&gt;</div> 
+		<!--左右小图标结束-->
+	</div>
+<!--中间大图片展示结束-->
+
+<!--动画效果部分开始-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" >
+	var bigm="";//定义变量bigm
+	var _index=0;//定义初始值为0,保存序列号
+	//点击图片列表，显示灰色区域和大图
+	$("#main ul li").click(function(){
+		$(".gray").show();//显示
+		$(".bigbox").show();
+		bigm=$(this).find("img").attr("bigsrc");
+		$(".bigbox img.bigImg").attr("src",bigm);
+		_index=$(this).index();
+	});
+	
+	//点击灰色区域隐藏大图
+	$(".gray").click(function(){
+		$(".bigbox").hide();//隐藏
+		$(".gray").hide();
+		});
+		//当点击右边按钮时
+		$(".bigbox .bigbox_right").click(function(){
+			//alert(1);
+			_index++;//序列号加1
+			if(_index>8) {alert("右边没有内容了"); _index=8;}
+				bigm=$("#main ul li").eq(_index).find("img").attr("bigsrc");
+				$(".bigbox img.bigImg").attr("src",bigm);//换大图地址
+		});
+		//当点击左边按钮时
+		$(".bigbox .bigbox_left").click(function(){
+			_index--;//序列号加1
+			if(_index<0) {alert("左边没有内容了"); _index=0}
+				bigm=$("#main ul li").eq(_index).find("img").attr("bigsrc");
+				$(".bigbox img.bigImg").attr("src",bigm);//换大图地址
+		});
+	
+</script>
+<!--动画效果部分结束-->
+</body>
+
+</html>

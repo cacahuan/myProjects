@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="caca" content="">
+  <title>MV排行榜</title>
+ </head>
+ <style type="text/css">
+	*{margin:0;padding:0;}
+	a{text-decoration:none;color:#969696;outline:none;}
+	li{list-style:none;}
+	body{font-size:15px;font-family:"微软雅黑";color:#707070;background:#fff;}
+
+		/*m-top start*/
+		#mc{width:100%;height:900px;}
+		#mc .m-top{width:100%;height:50px;background:rgba(0,0,0,.8);}
+		#mc .m-top .t-head{width:1300px;height:50px;margin:0 auto;}
+		#mc .m-top .t-head .h-logo{width:200px;height:50px;float:left;}
+		#mc .m-top .t-head .h-logo img{border:0;display:block;width:126px;height:30px;margin: 10px 0 0 36px;}
+		#mc .m-top .t-head .h-nav{width:600px;height:50px;float:left;}
+		#mc .m-top .t-head .h-nav ul li{float:left;height:50px;font-size:16px;line-height:50px;
+		margin-left:15px;margin-right:15px;text-align:center;position:relative;}
+		#mc .m-top .t-head .h-nav .n-xiala1{width:400px;height:50px;background:#8c8c8c;position:absolute;top:50px;left:0;display:none;}
+		#mc .m-top .t-head .h-nav .n-xiala2{width:200px;height:50px;background:#8c8c8c;position:absolute;top:50px;left:0;display:none;}
+		#mc .m-top .t-head .h-nav .n-xiala ul{height:50px;margin:0 auto;}
+		#mc .m-top .t-head .h-nav ul li a{color:#fff;}
+		#mc .m-top .t-head .h-nav ul li .a{color:#d7d7d7;display:block;height:50px;}
+		#mc .m-top .t-head .h-nav ul li .a:hover{background:#414141;color:#fff;}
+		#mc .m-top .t-head .h-nav ul li:hover .n-xiala1{display:block;z-index:999;}
+		#mc .m-top .t-head .h-nav ul li:hover .n-xiala2{display:block;z-index:999;}
+		#mc .m-top .t-head .h-search{width:300px;height:50px;float:left;}
+		#mc .m-top .t-head .h-search input{width:210px;height:30px;border:0px;outline:none;float:left;margin-top:10px;padding-left:10px;}
+		#mc .m-top .t-head .h-search a{font-size:14px;color:#fff;display:block;width:80px;height:30px;float:left;
+		background:#99cccc;text-align:center;line-height:30px;margin-top:10px;}
+		#mc .m-top .t-head .h-login{width:86px;height:50px;float:right;}
+		#mc .m-top .t-head .h-login a{width:40px;height:50px;display:block;color:#d7d7d7;font-size:14px;line-height:50px;text-align:center;}
+		#mc .m-top .t-head .h-login a:hover{color:#fff;}
+		#mc .m-top .t-head .h-login .l_login{float:left;}
+		#mc .m-top .t-head .h-login .l_register{float:right;}
+		#mc .m-top .t-head .h-login span{color:#fff;line-height:50px;}
+
+		/*m-main start*/
+		#mc .m-main{width:1000px;height:1050px;margin:3px auto;}
+		#mc .m-main .m-main-top{width:100%;height:50px;}
+		/*m-main-left start*/
+		#mc .m-main .m-main-left{width:200px;height:600px;float:left;margin-top:10px;}
+		#mc .m-main .m-main-left .m-main-left-list{width:100%;height:80px;font-size:15px;
+		text-align:center;line-height:80px;padding-top:10px;}
+		#mc .m-main .m-main-left .m-main-left-list a:hover{color:#000;}
+		#mc .m-main .m-main-left span .m-main-left-list{width:100%;height:80px;font-size:20px;
+		text-align:center;line-height:50px;color:#00ff66;}
+		/*m-main-right start*/
+		#mc .m-main .m-main-right{width:750px;height:780px;float:left;margin:30px 20px;}
+		#mc .m-main .m-main-right .m-main-right-top{width:100%;height:40px;margin-top:0px;}
+		#mc .m-main .m-main-right .m-main-right-top img{margin:7px 5px;float:left;}
+		#mc .m-main .m-main-right .m-main-right-top span{float:left;line-height:40px;}
+		#mc .m-main .m-main-right .m-main-right-top p{float:right;margin-right:20px;line-height:40px;}
+		#mc .m-main .m-main-right .m-main-right-main{width:100%;height:710px;margin-top:10px;}
+		#mc .m-main .m-main-right .m-main-right-main .m-main-right-main-list{width:100%;height:160px;border:1px solid #fff;margin-top:16px;}
+		#mc .m-main .m-main-right .m-main-right-main .m-main-right-main-list h1{line-height:150px;float:left;}
+		#mc .m-main .m-main-right .m-main-right-main .m-main-right-main-list .img1{margin-left:18px;float:left;}
+		#mc .m-main .m-main-right .m-main-right-main .m-main-right-main-list .img2{float:left;margin:70px -145px;}
+		#mc .m-main .m-main-right .m-main-right-main .m-main-right-main-list .img1:hover{background:url("images/1.png") no-repeat;margin:70px -145px;}
+		#mc .m-main .m-main-right .m-main-right-main .m-main-right-main-list .name span{line-height:130px;font-size:20px;
+		margin-left:30px;}
+		#mc .m-main .m-main-right .m-main-right-main .m-main-right-main-list .name a{color:#00ff66;}
+		#mc .m-main .m-main-right .m-main-right-main .m-main-right-main-list .time{margin-top:-30px;margin-left:33px;float:left;}
+		#mc .m-main .m-main-right .m-main-right-main .m-main-right-main-list .m-main-right-main-list-score{width:100px;
+		height:70px;float:right;margin:-110px 20px;font-size:45px;line-height:90px;text-align:center;}
+		#mc .m-main .m-main-right .m-main-right-bottom{width:500px;height:25px;margin:55px 250px;}
+		#mc .m-main .m-main-right .m-main-right-bottom ul li{float:left;line-height:25px;margin-right:10px;}
+		#mc .m-main .m-main-right .m-main-right-bottom a:hover{color:#000;}
+		#mc .m-main .m-main-right .m-main-right-bottom input{width:40px;height:15px;outline:none;margin-top:3px;}
+		#mc .m-main .m-main-right .m-main-right-bottom img{width:23px;height:23px;margin:-6px -4px;}
+		#mc .m-main .m-main-right .m-main-right-bottom img:hover{background:#847b7b;}
+
+		
+
+ </style>
+ <body>
+	
+	<div id="mc">
+	<!--顶部开始-->
+		<div class="m-top">
+			<div class="t-head">
+				<div class="h-logo">
+					<a href="#"><img src="images/logo.png" alt="mc音乐网站"/></a>
+				</div>
+				<div class="h-nav">
+					<ul>
+						<li style="margin-left:60px;"><a class="a" href="#">首页</a></li>
+						<li>
+							<a class="a" href="#">音乐</a>
+							<div class="n-xiala1">
+								<ul>
+									<li><a href="#">音乐推荐</a></li>
+									<li><a href="#">歌单广场</a></li>
+									<li><a href="#">歌手</a></li>
+									<li><a href="#">专辑</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a class="a" href="#">MV</a>
+							<div class="n-xiala2">
+								<ul>
+									<li><a href="#">MV推荐</a></li>
+									<li><a href="file:///C:/Users/Administrator/Desktop/Project/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/MV%E5%BA%93/index.html#">MV库</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a class="a" href="#">音乐资讯</a></li>
+						<li><a class="a" href="#">我的音乐盒</a></li>
+						<li><a class="a" href="#">关于作者</a></li>
+					</ul>
+				</div>
+				<div class="h-search">
+					<input type="text" placeholder="搜索歌曲,专辑,MV"><a href="#">搜索</a>
+				</div>
+				<div class="h-login">
+					<a class="l_login" href="file:///C:/Users/Administrator/Desktop/Project/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2/index.html">登录</a><span>|</span><a class="l_register" href="file:///C:/Users/Administrator/Desktop/Project/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/%E6%B3%A8%E5%86%8C%E7%95%8C%E9%9D%A2/index.html">注册</a>
+				</div>
+			</div>
+		</div>
+	<!--顶部结束-->
+			
+			<!--主体部分开始-->
+			<div class="m-main">
+				<div class="m-main-top"><img src="images/6.jpg" width="100%" height="60px"/></div>
+				<!--主体部分左边开始-->
+				<div class="m-main-left">
+					<span><div class="m-main-left-list">总榜</div></span>
+					<div class="m-main-left-list"><a href="#">内地榜</a></div>
+					<div class="m-main-left-list"><a href="#">港台榜</a></div>
+					<div class="m-main-left-list"><a href="#">日本榜</a></div>
+					<div class="m-main-left-list"><a href="#">韩国榜</a></div>
+					<div class="m-main-left-list"><a href="#">欧美榜</a></div>
+				</div>
+				<!--主体部分左边结束-->
+
+				<!--主体部分右边开始-->
+				<div class="m-main-right">
+					<div class="m-main-right-top">
+						<a href="#"><img src="images/2.png" width="28px" height="28px"/></a>
+						<span>2015年 第 30 期 (10.05)</span>
+						<a href="#"><img src="images/3.png" width="28px" height="28px"/></a>
+						<p>距离下一次更新还有  10：02：33</p>			
+					</div>
+					<div class="m-main-right-main">
+						<div class="m-main-right-main-list">
+							<h1>1</h1>
+							<a href="#">
+								<img class="img1" src="images/1.jpg" width="250px" height="160px"/>
+								<img class="img2" src="images/4.png" width="38px" height="38px"/>
+							</a>
+							<p class="name"><span><a href="#">少年说</a>--TFBOYS</span></p>
+							<p class="time">发布时间：2015-09-30</p>
+							<div class="m-main-right-main-list-score">93.4</div>
+						</div>
+
+						<div class="m-main-right-main-list">
+							<h1>2</h1>
+							<a href="#">
+								<img class="img1" src="images/2.jpg" width="250px" height="160px"/>
+								<img class="img2" src="images/4.png" width="38px" height="38px"/>
+							</a>
+							<p class="name"><span><a href="#">挚爱</a>--鹿晗</span></p>
+							<p class="time">发布时间：2015-10-01</p>
+							<div class="m-main-right-main-list-score">95</div>							
+						</div>
+
+						<div class="m-main-right-main-list">
+							<h1>3</h1>
+							<a href="#">
+								<img class="img1" src="images/3.jpg" width="250px" height="160px"/>
+								<img class="img2" src="images/4.png" width="38px" height="38px"/>
+							</a>
+							<p class="name"><span><a href="#">LDJFOI</a>--DFE</span></p>
+							<p class="time">发布时间：2015-10-03</p>
+							<div class="m-main-right-main-list-score">95.5</div>
+						</div>
+
+						<div class="m-main-right-main-list">
+							<h1>4</h1>
+							<a href="#">
+								<img class="img1" src="images/4.jpg" width="250px" height="160px"/>
+								<img class="img2" src="images/4.png" width="38px" height="38px"/>
+							</a>
+							<p class="name"><span><a href="#">DFAA</a>--DDEF</span></p>
+							<p class="time">发布时间：2015-10-04</p>
+							<div class="m-main-right-main-list-score">95.3</div>
+						</div>
+					</div>	
+
+					<!--右边底部开始-->
+					<div class="m-main-right-bottom">
+						<ul>
+							<li><p><a href="#">首页</a></p></li>
+							<li><p><a href="#">上一页</a></p></li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+							<li><a href="#">8</a></li>
+							<li><p><a href="#">下一页</a></p></li>
+							<li><p><a href="#">尾页</a></p></li>
+							<li><p>第</p></li>
+							<li><input type="text"></li>
+							<li><p>页</p></li>
+							<li><a href="#"><img src="images/3.png"/></a></li>
+						</ul>	
+					</div>
+						<!--右边底部结束-->
+				</div>
+					
+				</div>
+				<!--主体部分右边开始-->
+			</div>
+			<!--主体部分结束-->
+	</div>
+		
+ </body>
+</html>

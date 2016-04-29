@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="caca" content="">
+  <title>歌曲排行榜</title>
+ </head>
+ <style type="text/css">
+	*{margin:0;padding:0;}
+	a{text-decoration:none;color:#9d9d9d;outline:none;}
+	li{list-style:none;}
+	body{font-size:15px;font-family:"微软雅黑";color:#707070;background:#fff;}
+	/*m-top start*/
+	.top{width:100%;height:50px;}
+	.top .m-top{width:100%;height:50px;background:rgba(0,0,0,.8);}
+	.top .m-top .t-head{width:1300px;height:50px;margin:0 auto;}
+	.top .m-top .t-head .h-logo{width:200px;height:50px;float:left;}
+	.top .m-top .t-head .h-logo img{border:0;display:block;width:126px;height:30px;margin: 10px 0 0 36px;}
+	.top .m-top .t-head .h-nav{width:600px;height:50px;float:left;}
+	.top .m-top .t-head .h-nav ul li{float:left;height:50px;font-size:16px;line-height:50px;
+			margin-left:15px;margin-right:15px;text-align:center;position:relative;list-style:none;}
+	.top .m-top .t-head .h-nav .n-xiala1{width:400px;height:50px;background:#8c8c8c;position:absolute;top:50px;left:0;display:none;}
+	.top .m-top .t-head .h-nav .n-xiala2{width:200px;height:50px;background:#8c8c8c;position:absolute;top:50px;left:0;display:none;}
+	.top .m-top .t-head .h-nav .n-xiala ul{height:50px;margin:0 auto;}
+	.top .m-top .t-head .h-nav ul li a{color:#fff;}
+	.top .m-top .t-head .h-nav ul li .a{color:#d7d7d7;display:block;height:50px;}
+	.top .m-top .t-head .h-nav ul li .a:hover{background:#414141;color:#fff;}
+	.top .m-top .t-head .h-nav ul li:hover .n-xiala1{display:block;z-index:999;}
+	.top .m-top .t-head .h-nav ul li:hover .n-xiala2{display:block;z-index:999;}
+	.top .m-top .t-head .h-search{width:300px;height:50px;float:left;}
+	.top .m-top .t-head .h-search input{width:210px;height:30px;border:0px;outline:none;float:left;margin-top:10px;padding-left:10px;}
+	.top .m-top .t-head .h-search a{font-size:14px;color:#fff;display:block;width:80px;height:30px;float:left;
+			background:#99cccc;text-align:center;line-height:30px;margin-top:10px;}
+	.top .m-top .t-head .h-login{width:86px;height:50px;float:right;}
+	.top .m-top .t-head .h-login a{width:40px;height:50px;display:block;color:#d7d7d7;font-size:14px;line-height:50px;text-align:center;}
+	.top .m-top .t-head .h-login a:hover{color:#fff;}
+	.top .m-top .t-head .h-login .l_login{float:left;}
+	.top .m-top .t-head .h-login .l_register{float:right;}
+	.top .m-top .t-head .h-login span{color:#fff;line-height:50px;}	
+	/*m-top end*/
+	/*main start*/
+	.main-top{width:1200px;height:60px;margin:3px auto;}
+	.main{width:1200px;height:1100px;margin:0px auto;}
+	.main .main-left{width:200px;height:100%;float:left;}
+	.main .main-left .main-left-list1{width:100%;height:80px;}
+	.main .main-left .main-left-list1 h1{font-size:25px;line-height:70px;text-align:center;color:#00ff66;}
+	.main .main-left .main-left-list2{width:100%;height:380px;margin-top:20px;}
+	.main .main-left .main-left-list2 p{font-size:20px;line-height:50px;text-align:center;color:#000;}
+	.main .main-left .main-left-list2 ul li{font-size:15px;line-height:50px;text-align:center;color:#000;}
+	.main .main-left .main-left-list2 ul li a:hover{color:#797979;}
+	.main .main-left .main-left-list3{width:100%;height:410px;margin-top:20px;}
+	.main .main-left .main-left-list3 p{font-size:20px;line-height:50px;text-align:center;color:#000;}
+	.main .main-left .main-left-list3 ul li{font-size:15px;line-height:50px;text-align:center;color:#000;}
+	.main .main-left .main-left-list3 ul li a:hover{color:#797979;}
+	.main .main-right{width:970px;height:1080px;margin:0px 13px;float:left;background:url("images/2.jpg");}
+	.main .main-right .main-right-top{width:100%;height:80px;background:url("images/2.jpg");}
+	.main .main-right .main-right-top h1{font-size:25px;line-height:70px;text-align:center;color:#7c7a7a;}
+	.main .main-right .main-right-list{width:440px;height:460px;float:left;margin:5px 20px;}
+	.main .main-right .main-right-list .main-right-list-top{width:100%;height:50px;}
+	.main .main-right .main-right-list .main-right-list-top p{font-size:20px;line-height:60px;color:#000;}
+	.main .main-right .main-right-list .main-right-list-top a{font-size:16px;color:#00ff33;}
+	.main .main-right .main-right-list .main-right-list-top .img1{margin:-12px 3px;}
+	.main .main-right .main-right-list .main-right-list-top .img2{margin:-9px 3px;}
+	.main .main-right .main-right-list li{margin:15px 8px;}
+	.main .main-right .main-right-list li a{color:#2d869f;font-size:16px;}
+	.main .main-right .main-right-list li a:hover{color:#7aa8fc;}	
+	.main .main-right .main-right-list li .icon{float:right;margin-top:2px;}
+	.main .main-right .main-right-list li .icon a:hover{background:#929292;}
+	.main .main-right .main-right-bottom{width:480px;height:30px;float:left;margin:25px 485px;}
+	.main .main-right .main-right-bottom ul li{float:left;line-height:25px;margin-right:10px;}
+	.main .main-right .main-right-bottom a:hover{color:#e0e9f5;}
+	.main .main-right .main-right-bottom ul li input{width:40px;height:15px;outline:none;margin-top:3px;}
+	.main .main-right .main-right-bottom ul li img{width:32px;height:32px;margin:-2px -7px;}
+	.main .main-right .main-right-bottom ul li img:hover{background:#a49d9d;}
+ </style>
+ <body>
+  <!--顶部开始-->
+	<div class="top">
+		<div class="m-top">
+			<div class="t-head">
+				<div class="h-logo">
+					<a href="#"><img src="images/logo.png" alt="mc音乐网站"/></a>
+				</div>
+				<div class="h-nav">
+					<ul>
+						<li style="margin-left:60px;"><a class="a" href="#">首页</a></li>
+						<li>
+							<a class="a" href="#">音乐</a>
+							<div class="n-xiala1">
+								<ul>
+									<li><a href="#">音乐推荐</a></li>
+									<li><a href="#">歌单广场</a></li>
+									<li><a href="#">歌手</a></li>
+									<li><a href="#">专辑</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a class="a" href="#">MV</a>
+							<div class="n-xiala2">
+								<ul>
+									<li><a href="#">MV推荐</a></li>
+									<li><a href="#">MV库</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a class="a" href="#">音乐资讯</a></li>
+						<li><a class="a" href="#">我的音乐盒</a></li>
+						<li><a class="a" href="#">关于作者</a></li>
+					</ul>
+				</div>
+				<div class="h-search">
+					<input type="text" placeholder="搜索歌曲,专辑,MV"><a href="#">搜索</a>
+				</div>
+				<div class="h-login">
+					<a class="l_login" href="#">登录</a><span>|</span><a class="l_register" href="#">注册</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--顶部结束-->
+	
+	<!--主体部分开始-->
+		<div class="main-top"><img src="images/1.jpg" width="1200px" height="60px"/></div>
+		<div class="main">
+			<!--主体左侧部分开始-->
+			<div class="main-left">
+				<div class="main-left-list1"><h1>热门榜单</h1></div>
+				<div class="main-left-list2">
+					<ul>
+						<p>MC音乐巅峰榜</p>
+						<li><a href="#">巅峰榜'内地</a></li>
+						<li><a href="#">巅峰榜'港台</a></li>
+						<li><a href="#">巅峰榜'日本</a></li>
+						<li><a href="#">巅峰榜'韩国</a></li>
+						<li><a href="#">巅峰榜'欧美</a></li>	
+						<li><a href="#">巅峰榜'民谣</a></li>
+					</ul>
+				</div>
+				<div class="main-left-list3">
+						<p>全球榜</p>
+						<ul>
+						<li><a href="#">中国Top榜</a></li>
+						<li><a href="#">美国iTunes榜</a></li>
+						<li><a href="#">英国UK榜</a></li>
+						<li><a href="#">韩国Mnet榜</a></li>
+						<li><a href="#">日本公信榜</a></li>		
+						<li><a href="#">香港电台榜</a></li>
+						<li><a href="#">台湾幽浮榜</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--主体左侧部分结束-->
+
+			<!--主体右侧部分开始-->
+			<div class="main-right">
+				<div class="main-right-top">
+					<h1>榜单详情</h1>
+				</div>
+				<div class="main-right-list">
+					<div class="main-right-list-top">
+						<p>
+							巅峰榜'内地
+							<span><a href="#">/更多</a></span>
+							<a href="#"><img class="img1" src="images/1.png" width="35px" height="35px"/></a>
+							<a href="#"><img class="img2" src="images/2.png" width="28px" height="28px"/></a>
+						</p>
+					</div>
+					<li>01
+						<a href="#"><span>挚爱--鹿晗</span></a>
+						<i class="icon">
+							<a href="#"><img src="images/10.png"/></a>
+							<a href="#"><img src="images/11.png"/></a>
+							<a href="#"><img src="images/13.png"/></a>
+							<a href="#"><img src="images/14.png"/></a>
+						</i>						
+					</li>	
+					<li>02<a href="#"> 挚爱--鹿晗</a></li>
+					<li>03<a href="#"> 挚爱--鹿晗</a></li>
+					<li>04<a href="#"> 挚爱--鹿晗</a></li>
+					<li>05<a href="#"> 挚爱--鹿晗</a></li>
+					<li>06<a href="#"> 挚爱--鹿晗</a></li>
+					<li>07<a href="#"> 挚爱--鹿晗</a></li>
+					<li>08<a href="#"> 挚爱--鹿晗</a></li>
+					<li>09<a href="#"> 挚爱--鹿晗</a></li>
+					<li>10<a href="#"> 挚爱--鹿晗</a></li>		
+				</div>
+				<div class="main-right-list">
+					<div class="main-right-list-top">
+						<p>
+							巅峰榜'港台
+							<span><a href="#">/更多</a></span>
+							<a href="#"><img class="img1" src="images/1.png" width="35px" height="35px"/></a>
+							<a href="#"><img class="img2" src="images/2.png" width="28px" height="28px"/></a>
+						</p>
+					</div>
+					<li>01
+						<a href="#"><span>挚爱--鹿晗</span></a>
+						<i class="icon">
+							<a href="#"><img src="images/10.png"/></a>
+							<a href="#"><img src="images/11.png"/></a>
+							<a href="#"><img src="images/13.png"/></a>
+							<a href="#"><img src="images/14.png"/></a>
+						</i>						
+					</li>		
+					<li>02<a href="#"> 挚爱--鹿晗</a></li>
+					<li>03<a href="#"> 挚爱--鹿晗</a></li>
+					<li>04<a href="#"> 挚爱--鹿晗</a></li>
+					<li>05<a href="#"> 挚爱--鹿晗</a></li>
+					<li>06<a href="#"> 挚爱--鹿晗</a></li>
+					<li>07<a href="#"> 挚爱--鹿晗</a></li>
+					<li>08<a href="#"> 挚爱--鹿晗</a></li>
+					<li>09<a href="#"> 挚爱--鹿晗</a></li>
+					<li>10<a href="#"> 挚爱--鹿晗</a></li>					
+				</div>
+				<div class="main-right-list">
+					<div class="main-right-list-top">
+						<p>
+							巅峰榜'欧美
+							<span><a href="#">/更多</a></span>
+							<a href="#"><img class="img1" src="images/1.png" width="35px" height="35px"/></a>
+							<a href="#"><img class="img2" src="images/2.png" width="28px" height="28px"/></a>
+						</p>
+					</div>
+					<li>01
+						<a href="#"><span>挚爱--鹿晗</span></a>
+						<i class="icon">
+							<a href="#"><img src="images/10.png"/></a>
+							<a href="#"><img src="images/11.png"/></a>
+							<a href="#"><img src="images/13.png"/></a>
+							<a href="#"><img src="images/14.png"/></a>
+						</i>						
+					</li>	
+					<li>02<a href="#"> 挚爱--鹿晗</a></li>
+					<li>03<a href="#"> 挚爱--鹿晗</a></li>
+					<li>04<a href="#"> 挚爱--鹿晗</a></li>
+					<li>05<a href="#"> 挚爱--鹿晗</a></li>
+					<li>06<a href="#"> 挚爱--鹿晗</a></li>
+					<li>07<a href="#"> 挚爱--鹿晗</a></li>
+					<li>08<a href="#"> 挚爱--鹿晗</a></li>
+					<li>09<a href="#"> 挚爱--鹿晗</a></li>
+					<li>10<a href="#"> 挚爱--鹿晗</a></li>		
+				</div>
+				<div class="main-right-list">
+					<div class="main-right-list-top">
+						<p>
+							巅峰榜'民谣
+							<span><a href="#">/更多</a></span>
+							<a href="#"><img class="img1" src="images/1.png" width="35px" height="35px"/></a>
+							<a href="#"><img class="img2" src="images/2.png" width="28px" height="28px"/></a>
+						</p>
+					</div>
+					<li>01
+						<a href="#"><span>挚爱--鹿晗</span></a>
+						<i class="icon">
+							<a href="#"><img src="images/10.png"/></a>
+							<a href="#"><img src="images/11.png"/></a>
+							<a href="#"><img src="images/13.png"/></a>
+							<a href="#"><img src="images/14.png"/></a>
+						</i>						
+					</li>	
+					<li>02<a href="#"> 挚爱--鹿晗</a></li>
+					<li>03<a href="#"> 挚爱--鹿晗</a></li>
+					<li>04<a href="#"> 挚爱--鹿晗</a></li>
+					<li>05<a href="#"> 挚爱--鹿晗</a></li>
+					<li>06<a href="#"> 挚爱--鹿晗</a></li>
+					<li>07<a href="#"> 挚爱--鹿晗</a></li>
+					<li>08<a href="#"> 挚爱--鹿晗</a></li>
+					<li>09<a href="#"> 挚爱--鹿晗</a></li>
+					<li>10<a href="#"> 挚爱--鹿晗</a></li>		
+				</div>
+
+				<div class="main-right-bottom">
+					<ul>
+						<li><p><a href="#">首页</a></p></li>
+						<li><p><a href="#">上一页</a></p></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+						<li><a href="#">8</a></li>
+						<li><p><a href="#">下一页</a></p></li>
+						<li><p><a href="#">尾页</a></p></li>
+						<li><p>第</p></li>
+						<li><input type="text"></li>
+						<li><p>页</p></li>
+						<li><a href="#"><img src="images/4.png"/></a></li>
+					</ul>
+				</div>
+			</div>
+			<!--主体右侧部分结束-->
+
+		</div>
+	<!--主体部分结束-->
+ </body>
+</html>

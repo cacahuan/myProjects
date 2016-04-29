@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <!--viewport标签告诉浏览器，使用设备的宽度作为视图宽度并禁止初始的缩放-->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>caca's project</title>
+  <style type="text/css">
+	*{margin:0;padding:0;}
+	li{list-style:none;}
+	a{text-decoration:none;font-family:"微软雅黑";}
+	#main{width:100%;height:1000px;}
+	.banner{width:100%;height:225px;background:url("images/banner1.jpg");}
+	.logo{width:150px; height:50px;margin:20px 0 0 10%;float:left;}
+	.logo h1{color:#F5DBD9;font-weight: normal;font-family: 'Poiret One', cursive;}
+	.nav{width:40%;float:left;margin-left:50%;margin-top:-3%;}
+	.nav ul li{width:18%;float:left;margin:0.5% 0.01%;}
+	.nav ul li a{color:#fff;line-height:30px;text-align:center;display:block;}
+	
+	.body{width:100%;height:600px;}
+	.body_left{width:11%;height:700px;float:left;background:#ababab;border-bottom:1px solid #bebebe;}
+	.left_title{width:100%;height:130px;border-bottom:1px solid #939393;border-top:1px solid #bebebe;cursor:pointer;}
+	.left_title:hover{background:#939393;}
+	.left_title:nth-child(1){margin-top:50px;border-top:1px solid #939393;}
+	.left_title img{margin-top:30px;margin-left:40%;}
+	.left_title p{font-size:18px;margin-top:10px;text-align:center;font-family:"微软雅黑";}
+
+
+	.body_right{width:89%;background:#c2c2c2;float:right;}
+	.body_right_top{width:100%;height:50px;background:#ababab;}
+	.title{width:10%;background:#ababab;float:left;margin-left:20%;cursor:pointer;font-family:"微软雅黑";}
+	.title p{line-height:50px;text-align:center;font-size:20px;}
+	.title:hover{background:#a2a2a2;}
+
+	.xiala1{width:9%;height:120px;background:#ababab;display:none;z-index:999;position:absolute;}
+	.xiala1 li{width:100%;height:59px;border-bottom:1px solid #888888;}
+	.xiala1 li:nth-child(2){border-bottom:1px solid #ababab;}
+	.xiala1 li a{line-height:60px;text-align:center;display:block;font-size:16px;color:#fff;font-weight:900;word-spacing:3px;}
+	.xiala1 li a:hover{background:#848484;}
+
+	.xiala2{width:9%;height:240px;background:#ababab;display:none;z-index:999;position:absolute;}
+	.xiala2 li{width:100%;height:59px;border-bottom:1px solid #888888;}
+	.xiala2 li:nth-child(5){border-bottom:1px solid #ababab;}
+	.xiala2 li a{line-height:60px;text-align:center;display:block;font-size:16px;color:#fff;font-weight:700;}
+	.xiala2 li a:hover{background:#848484;}
+
+	.xiala3{width:9%;height:180px;background:#ababab;display:none;z-index:999;position:absolute;}
+	.xiala3 li{width:100%;height:59px;border-bottom:1px solid #888888;}
+	.xiala3 li:nth-child(3){border-bottom:1px solid #ababab;}
+	.xiala3 li a{line-height:60px;text-align:center;display:block;font-size:16px;color:#fff;font-weight:700;}
+	.xiala3 li a:hover{background:#848484;}
+	
+	.context{width:90%;margin:15px 25px;position:absolute;background:#ababab;}
+	.video{width:180px;height:160px;float:left;margin-left:20px;margin-top:30px;cursor:pointer;}
+	.video p{color:#4b4b4b;font-size:14px;text-align:center;line-height:20px;}
+
+	/*响应式(these rules will be in effect if the viewport width is 800px or less)*/
+	@media(max-width:800px;)
+	{
+		#main{width: auto;float:none;}
+		.logo{margin:20px 0 0 3%;}
+		.banner{width: auto;float:none;}
+		.nav{margin-left:20%;}
+		.nav ul li{width:25%;}
+		.body{width: auto;float:none;}
+		.body_left{width: 8%;float:none;}
+		.left_title p{font-size:10px;}
+		.title{float:none;margin-left:10%;}
+		.context{width: auto;float:none;height:auto;}
+		.left_title{width:8%;float:none;}
+		.left_title img{margin-left:20%;}
+	}
+
+	
+	
+	
+
+	
+	
+  </style>
+  
+ </head>
+ <body>
+  <div id="main">
+	<!--head start-->
+	<div class="banner">
+		<div class="logo">
+		  <a href="index.jsp"><h1>ChangeS</h1></a>
+		</div>
+	    <div class="nav">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">训练计划</a></li>
+				<li><a href="#">新闻食谱</a></li>
+				<li><a href="#">动态</a></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--head end-->
+	
+	<!--body start-->
+	<div class="body">
+		<div class="body_left">
+			<div class="left_title">
+				<img src="video/2.png"/>
+				<p>我的训练计划</p>
+			</div>
+			<div class="left_title">
+				<img src="video/1.png"/>
+				<p>我的训练提醒</p>
+			</div>
+			<div class="left_title">
+				<img src="video/3.png"/>
+				<p>我的训练记录</p>
+			</div>
+			<div class="left_title">
+				<img src="video/5.png"/>
+				<p>我的训练分享</p>
+			</div>
+		</div>
+		<div class="body_right">
+			<div class="body_right_top">
+				<div class="title" id="title1">
+					<p>时间</p>
+					<div class="xiala1">
+						<li><a href="#">周&nbsp期</a></li>
+						<li><a href="#">单&nbsp次</a></li>
+					</div>
+				</div>
+				<div class="title" id="title2">
+					<p>部位</p>
+					<div class="xiala2">
+						<li><a href="#">背&nbsp部</a></li>
+						<li><a href="#">手&nbsp臂</a></li>
+						<li><a href="#">腿&nbsp部</a></li>
+						<li><a href="#">小&nbsp腹</a></li>
+					</div>
+				</div>
+				<div class="title" id="title3">
+					<p>难度</p>
+					<div class="xiala3">
+						<li><a href="#">初&nbsp级</a></li>
+						<li><a href="#">中&nbsp级</a></li>
+						<li><a href="#">高&nbsp级</a></li>
+					</div>
+
+				</div>
+			</div>
+			<div class="context">
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/><p>健身正妹大屁股与性感腿部台上锻炼</p></div>
+				<div class="video"><img src="videoimg/2.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/><p>减肥女儿激励整个家庭减掉500磅</p></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+				<div class="video"><img src="videoimg/1.png"/><img class="i1" src="video/6.png" style="margin:30px -110px;position:relative;display:none;"/></div>
+			</div>
+		</div>
+	</div>
+
+	<!--body end-->
+  </div>
+   <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+   <script type="text/javascript">
+		//第1个下拉框
+		$("#title1").hover(function(){
+			$(".xiala1").slideToggle(100);
+		});
+		//第2个下拉框 
+		$("#title2").hover(function(){
+			$(".xiala2").slideToggle(200);
+		});
+		//第3个下拉框
+		$("#title3").hover(function(){
+			$(".xiala3").slideToggle(200);
+		});
+		
+		$(".video").hover(function(){
+			//alert("a");
+			$(this).find(".i1").fadeIn(400);
+			$(this).find("p").css("color","#2a2a2a");
+		},function(){
+			$(this).find(".i1").fadeOut(400);
+			$(this).find("p").css("color","#4b4b4b");
+		});
+   </script>
+ </body>
+</html>

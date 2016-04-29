@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>caca刘</title>
+		<!--css 层叠样式表 包装 衣服-->
+		<style>
+			*{margin:0;padding:0;font-family:"微软雅黑";}
+			body{background:black;}
+			#main{width:900px;height:575px;margin:20px auto;}
+			.left,.mid,.right{width:280px;height:335px;}
+			.left{float:left;}
+			.mid{float:left;margin-left:30px;}
+			.right{float:right;}
+			.txt,.pic{width:280px;height:335px;}
+			.bot{margin-top:15px;}
+			.txt{background:black;}
+			.txt h2{font-size:40px;color:#EB614A;text-align:center;padding-top:80px;}
+			.txt h3{font-size:12px;color:#EB614A;padding:0 20px;}
+			.txt p{font-size:12px;color:#fff;line-height:25px;padding:0 20px;}
+
+			img{animation:mov 3s infinite;}
+			@keyframes mov{
+				form{transform:rotateY(0deg);}
+				to{transform:rotateY(360deg);}
+			}
+
+			h2{animation:txt 2s infinite;}
+			@keyframes txt{
+				0%{text-shadow:0 0 0px #ff0;}
+				50%{text-shadow:0 0 10px #ff0;}
+				100%{text-shadow:0 0 0px #ff0;}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- div 盒子模型 -->
+		<div id="main">
+			<!--左边区域-->
+			<div class="left">
+				<img src="images/1.jpg" width="280" height="335" />
+			</div>
+
+			<!--中间区域-->
+			<div class="mid">
+				<!--文本-->
+				<div class="txt">
+					<a href=#><h2>诗和远方</h2></a>
+					<h3>caca刘独家解读</h3>
+					<p>在笑语翩飞的季节里，青春如烟花般绽放，被演绎得美轮美奂。
+					一切就像梦里花开的声音，睡莲在一片薄薄的青草上，感悟流年的语色。</p>
+				</div>
+
+				<!--图片-->
+				<div class="pic bot">
+					<img src="images/2.jpg" width="280" height="335" />
+				</div>
+			</div>
+
+			<!--右边区域-->
+			<div class="right">
+				<!--图片-->
+				<div class="pic">
+					<img src="images/3.jpg" width="280" height="335" />
+				</div>
+				
+			</div>
+
+		</div>
+	</body>
+</html>
+<!--
+	id="身份证号"  class="名字 名字"
+-->

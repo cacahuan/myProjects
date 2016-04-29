@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>-caca</title>
+		<!--CSS层叠样式-->
+		<style type="text/css">
+		*{margin:0;padding:0;}
+			.ad{width:520px;height:280px;background:#fff;margin:100px auto;position:relative;/*相对定位，参照物为大盒子，不动*/overflow:hidden;}
+			.pic{width:520px;height:280px;border:1px solid #00ffcc;} 
+			.pic ul{width:3640px;position:absolute;top:0px;left:-520px;}
+			.pic ul li{float:left;list-style:none;width:520px;height:280px;}
+			.left,.right{width:40px;height:40px;background:rgba(0,0,0,0.3);font-size:28px;text-align:center;line-height:40px;color:#fff;position:absolute;/*决定定位，可移动*/ top:120px;cursor:pointer;}
+			.left:hover,.right:hover{background:rgba(0,0,0,0.5);}
+			.left{left:5px;}
+			.right{right:5px;}	
+			.in{width:260px; height:5px; position:absolute; right:60px;  bottom:15px;}
+		    .in li{list-style:none;width:10px; height:10px; float:left;
+						 background:rgba(0,0,0,0.5); margin-right:10px;border-radius:10px;/*css3圆角*/}
+			.in #xz{position:absolute; left:65px;  top:0px;  animation:xz 15S linear infinite ;}
+				@keyframes	xz{
+			0%{left:0px; background:#0033cc;}/* 从*/
+			19%{left:0px; background:##0033cc;}
+			20%{left:20px; background:#c40002;}
+			39%{left:20px;  background:#c40002;}
+			40%{left:40px;  background:#fff;}/* 从*/
+			59%{left:40px;  background:#fff;}
+			60%{left:60px; background:#00ffcc;}
+			79%{left:60px; background:#00ffcc;}
+			80%{left:80px; background:#ffff00;}
+			99%{left:80px; background:#ffff00;}
+			100%{left:0px;background:#fec425;}/*到*/
+		}
+		  .pm{width:100%;position:absolute;top:0px;animation:slider 15s linear infinite;}
+		  .pm li{width:520px;height:280px;}
+				@keyframes slider{
+			0%{left:0px;}
+			19%{left:0px;}
+			20%{left:-520px;}
+			39%{left:-520px;}
+			40%{left:-1040px;}
+			59%{left:-1040px;}
+			60%{left:-1560px;}
+			79%{left:-1560px;}
+			80%{left:-2080px;}
+			99%{left:-2080px;}
+			100%{left:-2600px;}
+  }
+		</style>
+	</head>
+
+<body>
+		
+	<div class="ad">
+	<!--图片区-->
+		<div class="pic">
+			<ul class="pm">
+				<li><img src="img/5.jpg" /></li>
+				<li><img src="img/1.jpg" /></li>
+				<li><img src="img/2.jpg" /></li>
+				<li><img src="img/3.jpg" /></li>
+				<li><img src="img/4.jpg" /></li>
+				<li><img src="img/5.jpg" /></li>
+				<li><img src="img/1.jpg" /></li>
+				
+			</ul>
+		</div>
+		<div class="in">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li id="xz"></li>
+		
+		</div>
+		<!--提示箭头-->
+		<div class="left">&lt;</div>
+		<div class="right">&gt;</div>
+	</div>
+
+	<script src="js/jquery.js"></script>		
+	<script>
+		var a=1;//定义变量a
+		var Time=new Date();//前一次的时间点
+		$(".right") .click(function(){//当.right被点击的时候，执行下面事件
+			if( (new Date()-Time)>500){
+			Time=new Date();
+			a++;
+			var let=-a*520+"px";
+			$(".pic ul") .animate({left:let},500,function(){if(a==6){$(".pic ul") .css("left","-520px");a=1;}});
+			//ul进过500毫秒的时间将left的值变为-510px
+			}
+		});
+	
+		var a=1;//定义变量a
+		var Time=new Date();//前一次的时间点
+		$(".left") .click(function(){//当.left被点击的时候，执行下面事件
+			if( (new Date()-Time)>500){
+			Time=new Date();
+			a--;
+			var let=-a*520+"px";
+			$(".pic ul") .animate({left:let},500,function(){if(a==0){$(".pic ul") .css("left","-2600px");a=5;}});
+			//ul进过500毫秒的时间将left的值变为-510px
+			}
+		});
+	</script>
+
+</body>
+
+</html>

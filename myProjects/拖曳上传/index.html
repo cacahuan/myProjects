@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="caca" content="">
+  <title>caca'project</title>
+ </head>
+ <style type="text/css">
+	*{margin:0;padding:0;}
+	a{text-decoration:none;outline:none;}
+	li{list-style:none;}
+	body{font-size:13px;font-family:"微软雅黑";color:#707070;background:url("images/1.jpg");}
+	#message{width:520px;height:120px;margin:100px 430px;background:#fff;border-radius:10px;padding:10px 10px;position:absolute;}
+	#message .context{width:500px;height:100px;margin:0px auto;border-radius:8px;}
+	#message .imgbut{width:70px;height:50px;margin:6px;float:left;font-size:12px;text-align:center;cursor:pointer;}
+	#message .imgbut img{width:40px;height:40px;margin:5px 10px;}
+	#message .edit{width:330px;height:70px;border:1px solid #707070;margin:10px;float:right;}
+	#message .msgbut{width:500px;height:30px;margin:2px 8px;border-radius:3px;display:none;}
+	#message .msgbut font{font-size:12px;margin:0px 14px;cursor:pointer;color:#707070;}
+	#message .msgbut span{display:block;width:40px;font-size:13px;text-align:center;float:right;background:#99ff33;border-radius:3px;
+	cursor:pointer;}
+	#message .tuoye{width:520px;height:300px;background:rgba(0,0,0,.3);box-shadow:0 0 20px #fff;display:none;}
+	#message .tuoye p{width:100%;height:300px;line-height:280px;text-align:center;color:#fff;font-size:23px;position:absolute;}
+ </style>
+
+ <body>
+	<div id="message">
+		<!--留言开始-->
+		<div class="context">
+			<div class="imgbut">
+				<img src="images/1.png" width="40px" height="40px"/>
+				上传图片
+			</div>
+			<div class="edit" contenteditable="true"></div>
+		</div>
+		<!--留言结束-->
+
+		<!--发表开始-->
+		<div class="msgbut">
+			<font>本地相册</font>
+			<font id="ty">拖曳上传</font>
+			<span>发表</span>
+		</div>
+		<!--发表结束-->
+
+		<!--拖曳区域开始-->
+		<div class="tuoye">
+			<p class="p">请将图片拖曳到此区域</p>
+		</div>
+		<!--拖曳区域结束-->
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+	<script type="text/javascript">
+		//点击上传图片按钮
+		$('.imgbut').click(function(){
+			$('.msgbut').slideToggle();//自动展开和收缩
+		});
+		//点击输入框
+		$('.edit').click(function(){
+			$('.msgbut').slideDown();//向下展开
+		});
+		//点击拖曳上传按钮
+		$('#ty').click(function(){
+			$('.tuoye').slideToggle();//点击输入框，向下展开
+		});
+		//找到要拖进去的目标元素
+		var oDiv = $('.tuoye').get(0);//.get(0)的意思是把jquery对象转换为js对象
+		var op = $('.tuoye .p');
+
+		//进入
+		oDiv.ondragenter = function(){
+			op.html("可以释放图片了");
+		}
+		//离开
+		oDiv.ondragleave = function(){
+			op.html("请将图片拖曳到此区域");
+		}
+		//在目标元素内移动
+		oDiv.ondragover = function(e){
+			e.preventDefault();//阻止浏览器默认行为
+			//e.stopPropagation();//jquery下使用
+		}
+		//释放
+		oDiv.ondrop = function(e){
+			e.preventDefault();
+			//获取拖曳过来的文件
+			var fs = e.dataTransfer.files;//获取拖来文件的集合
+			var len = fs.length;//获取文件长度
+			for(var i=0;i<len;i++){
+			//判断文件类型
+			var _type = fs[i].type;//获取文件类型
+
+			if(_type.indexOf("image")!=-1){//判断是否为图片文件
+				
+				var fd = new FileReader();//创建一个文件读取对象
+				fd.readAsDataURL(fs[i]);
+				fd.onload = function(){//读取完触发事件
+					var oImg = $("<img scr=''/>");//创建一个图片标签
+					oImg.attr("src",this.result);//获取地址
+					
+					$('.tuoye').append(oImg);
+
+					op.html();
+				}
+			}else{
+				alert("请上传图片文件!");
+			}
+			}
+		}
+	</script>
+ </body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="caca" content="">
+  <title>caca'project</title>
+ </head>
+ <style type="text/css" id="css">
+	*{margin:0;padding:0;}
+	a{text-decoration:none;color:#fff;outline:none;}
+	li{list-style:none;}
+	body{font-size:15px;font-family:"微软雅黑";color:#707070;background:#aaaaaa;}
+
+	#box{width:800px;height:360px;margin:250px auto;position:relative;}
+	#img{width:800px;height:360px;-webkit-perspective:800px;}
+	#img li{height:360px;background:#00ff99;position:relative;-webkit-transform-style:preserve-3d;
+	-webkit-transform:translateZ(-180px);float:left;}
+	#img li span{height:360px;position:absolute;}
+	#img li span:nth-child(1){background:url("images/1.jpg");-webkit-transform:translateZ(180px);}
+	#img li span:nth-child(2){background:url("images/2.jpg");-webkit-transform:translateZ(-180px) rotateX(180deg);}	
+	#img li span:nth-child(3){background:url("images/3.jpg");top:-360px;-webkit-transform-origin:bottom;
+	-webkit-transform:translateZ(180px) rotateX(90deg);} 
+	#img li span:nth-child(4){background:url("images/4.jpg");top:360px;-webkit-transform-origin:top;
+	-webkit-transform:translateZ(180px) rotateX(-90deg);}
+	
+
+	
+	#button{position:absolute;right:95px;bottom:10px;}
+	#button li{width:16px;height:16px;background:#000;color:#fff;font-size:13px;line-height:16px;text-align:center;border-radius:8px;
+	float:left;margin-left:5px;box-shadow:0px 2px 5px #fff;cursor:pointer;}
+ </style>
+ <body>
+ <!--大盒子开始-->
+  <div id="box">
+	<!--图片-->
+	<ul id="img">
+		
+	</ul>
+	<!--按钮-->
+	<ul id="button">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+  </div>
+
+  <script src="js/jquery.js"></script>
+	<script>
+
+	function ca(){
+		var lLen=20;
+		var lWid=800/lLen;
+		var pHtml="";
+		var pCss="";
+		var z=0;
+		var pTime="";
+
+		for(var i=1;i<lLen;i++){
+			if(i>lLen/2){z--};
+			pHtml+="<li style='z-index:"+z+"'><span></span><span></span><span></span><span></span></li>";
+			pCss+="#img li:nth-child("+(i+1)+") span{background-position:"+(i*-lWid)+"px;}"
+			pTime+="#img li:nth-child("+(i)+") {-webkit-transition:1s "+(i*0.1)+"s;}"
+		};
+		$("#img").append(pHtml);
+		$("#css").append("#img li{width:"+lWid+"px;} #img li span{width:"+lWid+"px;}"+pCss+pTime);
+	};
+	ca();
+
+		$("#button li").click(function(){
+			var a=$(this).index();
+			var b=a*9;
+			$("#img li").css("-webkit-transform","translateZ(-180px) rotateX("+b+"0deg)")
+
+		});
+	</script>
+ </body>
+</html>

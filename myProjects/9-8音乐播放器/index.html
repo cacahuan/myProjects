@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="caca" content="">
+  <title>caca'project</title>
+ </head>
+ <style type="text/css">
+	*{margin:0;padding:0;}
+	body{background:#888888;}
+	#main{width:257px;height:230px;margin:90px;background:#8b8b8b;}
+	#main img{margin:5px 5px;}
+	.music audio{width:255px;position:absolute;top:320px;left:90px;}
+	.right{width:800px;height:677px;position:absolute;top:50px;left:350px;font-size:18px;text-align:center;line-height:25px;color:#ffccff;}
+	.nav{width:295px;height:50px;position:absolute;top:360px;left:90px;cursor:pointer;}
+	
+ </style>
+
+ <body>
+	<div id="main"><img src="img/18.jpg"/></div>
+	<div class="music">
+		<audio controls preload id="music">
+			<source src="music/1.mp3" type="audio/mp3">
+			<source src="music/2.mp3" type="audio/mp3">
+			<source src="music/3.mp3" type="audio/mp3">
+			<source src="music/4.mp3" type="audio/mp3">
+		</audio>
+	</div>
+	<div class="right">
+		<h2>再见再见</h2>
+		<h3>李易峰</h3>
+		<h4>《栀子花开》主题曲</h4>
+					<p>歌词：</p>
+					<p>汽车声打破宁静 </p>
+					<p>听得见却看不清 </p>
+					<p>路灯下我的身影 </p>
+					<p>是最短的距离 </p>
+					<p>最亲密 </p>
+					<p>汽车声打破宁静</p> 
+					<p>听得见却看不清,突然安静 </p>
+					<p>路灯下我的身影 </p>
+					<p>是最短的距离 </p>
+					<p>最亲密 </p>
+					<p>我已用尽全身力气 </p>
+					<p>依然不在一个世界里 </p>
+					<p>oh~那么让我最后握紧你的手 </p>
+					<p>一起说 </p>
+					<p>再见再见再见再见再见再见再见 </p>
+					<p>一百遍 </p>
+					<p>如果永远都不再见 </p>
+					<p>再见再见再见再见再见再见再见 </p>
+					<p>一万遍 </p>
+					<p>如果永远都不再见 </p>
+					<p>请转过去保持安静 </p>
+					<p>不要看我眼睛 </p>
+					<p>不再透明 </p>
+					<p>路灯下你的身影 </p>
+					<p>是最远的距离 </p>
+					<p>永远的距离 </p>
+					<p>我已用尽全身力气 </p>
+					<p>依然无法阻止忘记 </p>
+					<p>那么让我最后握紧你的手 </p>
+					<p>一起说 再见再见 </p>
+					<p>再见再见再见再见再见 </p>
+					
+					
+	</div>
+	<div class="nav">
+		
+			<a><img src="img/21.jpg" width="56px" height="56px" onclick="bofang()"/></a>
+			<a><img src="img/20.jpg" width="56px" height="56px" onclick="zanting()"/></a>
+			<a><img src="img/25.jpg" width="56px" height="56px" onclick="kuaijin()"/></a>
+			<a><img src="img/22.jpg" width="56px" height="56px" onclick="kuaitui()"/></a>
+			<a><img src="img/27.jpg" width="56px" height="56px" onclick="jiasu()"/></a>
+			<a><img src="img/26.jpg" width="56px" height="56px" onclick="jiansu()"/></a>
+			<a><img src="img/24.jpg" width="56px" height="56px" onclick="changsu()"/></a>
+			<a><img src="img/32.jpg" width="56px" height="56px" onclick="jingyin()"/></a>
+			<a><img src="img/31.jpg" width="56px" height="56px" onclick="zengyin()"/></a>
+			<a><img src="img/30.jpg" width="56px" height="56px" onclick="jiangyin()"/></a>
+			
+	</div>
+
+	<script language="javascript">
+		var music=document.getElementById("music");//获取music的ID
+		//播放按钮
+		function bofang(){
+			music.play();
+			}
+		//暂停按钮
+		function zanting(){
+			music.nxtPlay();
+		}
+		//快进按钮
+		function kuaijin(){
+			music.currentTime+=10;
+		}
+		//快退按钮
+		function kuaitui(){
+			music.currentTime-=10;
+		}
+		//加速播放
+		function jiasu(){
+			music.playbackRate=3;
+		}
+		//减速播放
+		function jiansu(){
+			music.playbackRate=1/2;
+		}
+		//常速播放
+		function changsu(){
+			music.playbackRate=1;
+		}
+		//静音按钮
+		function jingyin(){
+			music.muted=true;
+		}
+		//增音按钮
+		function zengyin(){
+			music.volume+=0.2;
+			music.muted=false;
+		}
+		//降音按钮
+		function jiangyin(){
+			music.volume-=0.2;
+			music.muted=false;
+		}
+	</script>
+ </body>
+</html>

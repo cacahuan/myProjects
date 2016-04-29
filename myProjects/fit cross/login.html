@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="caca" content="">
+  <title>登录页面</title>
+ </head>
+ <style type="text/css">
+	*{margin:0;padding:0;}
+	a{text-decoration:none;}
+	li{list-style:none;}
+	body{font-size:12px;color:#000;font-family:"微软雅黑";background:url("background/2.jpg")no-repeat;}
+
+	#login{width:400px;height:550px;margin:110px 90px;}
+	#login .login-top{width:100%;height:80px;}
+	#login .login-top ul li{font-size:28px;color:#7c7c7c;float:left;}
+	#login .login-top ul li a{color:#fff;}
+	#login .login-top ul li a:hover{color:#8a8a8a;}
+
+	#login .login-mid1{width:270px;height:40px;margin:15px 0px;font-size:15px;color:#8b8b8b;text-indent:10px;background:rgba(0,0,0,.15);outline:none;box-shadow: 0 1px 0 rgba(0,0,0,1), inset 0 1px 1px rgba(0,0,0,1);border-radius:6px;}
+	#login .login-mid2{width:270px;height:40px;margin:15px 0px;font-size:15px;color:#8b8b8b;text-indent:10px;background:rgba(0,0,0,.15);outline:none;border-radius:6px;}
+	#login .login-mid3{width:270px;height:40px;margin:15px 0px;font-size:15px;color:#8b8b8b;text-indent:10px;background:rgba(0,0,0,.15);outline:none;box-shadow: 0 1px 0 rgba(0,0,0,1), inset 0 1px 1px rgba(0,0,0,1);border-radius:6px;}
+
+	#login ul li{list-style:none;float:left;}
+	#login .login-left{width:130px;height:30px;margin-left:0px;margin-top:30px;float:left;
+	color:#8b8b8b;text-indent:10px;background:rgba(0,0,0,.15);outline:none;border-radius:6px;}
+
+	#login .login-right{width:100px;height:50px;margin-left:20px;margin-top:10px;background:rgba(0,0,0,.15);border-radius:6px;}
+
+	#login .login-bottom input{width:150px;height:30px;margin:27px			65px;font-size:17px;text-align:center;line-height:30px;background:rgba(0,0,0,0.05);color:#fff;cursor:pointer;border-radius:6px;}
+	#login .login-bottom input:hover{color:#8a8a8a;}
+	#login .bottom{width:70%;height:30px;margin:-15px 0;font-size:13px;border-radius:5px;text-align:center;line-height:30px;background:#9a9a9a;}
+	
+ </style>
+
+ <body>
+	<div id="login">
+		<!--顶部登录，注册部分开始-->
+		<div class="login-top">
+			<ul>
+				<li>登录|</li>
+				<li><a href="./regist.html">注册</a></li>
+			</ul>
+		</div>
+		<!--顶部登录，注册部分结束-->
+		<form action="./index.html">
+		<!--中间帐号，密码部分开始-->
+			<p><input type="text" class="login-mid1" placeholder="请输入帐号" required="required"></p>
+		
+			<p><input type="text" class="login-mid2" placeholder="请输入密码" required="required"></p>
+
+		<!--左边验证码开始-->
+			<p><input type="text" class="login-left" placeholder="请输入验证码" required="required"></p>
+		
+			<p><input type="text" class="login-right"></p>
+		
+		<div class="login-bottom"><input type="submit" value="登  录"/></div>
+		</form>
+		<div class="bottom">注：登录后，即您同意用户使用条款</div>
+	</div>
+ </body>
+</html>
+
+

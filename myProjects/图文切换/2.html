@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <!--声明当前页面的编码格式 UTF-8（国际编码）gbk(中文简体)-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<!--声明当前页面的三要素-->
+	<title>标题</title>
+	<meta name="Keywords" content="关键字">
+	<meta name="Description" content="描述">
+  <!--样式 css 变漂亮 衣柜-->
+  <style type="text/css">
+		/*属性:值;*/
+		*{margin:0; padding:0;}
+		body{background:#000;}
+		#dome{width:1200px; margin:20px auto;/*水平居中*/}
+		#dome ul li{list-style:none; width:300px; margin:20px; height:290px;  float:left; cursor:pointer; /*position:relative;参照物*/ opacity:1; transition:all 0.5s;}
+		#dome ul li:nth-child(1){background:#D44825;}
+		#dome ul li:nth-child(2){background:#2D8AF1;}
+		#dome ul li:nth-child(3){background:#0CC5E7;}
+		#dome ul li:nth-child(4){background:#666666;}
+		#dome ul li:nth-child(5){background:#FF6E1A;}
+		#dome ul li:nth-child(6){background:#64D500;}
+		#dome ul li h2{color:#fff;font-size:80px; line-height:200px; text-align:center;}
+		#dome ul li img{transform:translateY(-200px);opacity:0; transition:all 1s;}
+		#dome ul li:hover H2{opacity:0;}
+		#dome ul li:hover img{opacity:1;}
+		#dome ul li.rot{-webkit-animation:rot 1s;}
+		#dome ul li.topq{-webkit-animation:topq 1s;}
+		#dome ul li.sca{-webkit-animation:sca 1s;}
+		/*css3动画 -webkit-谷歌  默认请用火狐浏览器*/
+		@-webkit-keyframes  rot{
+		0%{transform:rotate(0deg);}
+		20%{transform:rotate(-20deg);}
+		40%{transform:rotate(15deg);}
+		60%{transform:rotate(-10deg);}
+		80%{transform:rotate(5deg);}
+		100%{transform:rotate(0deg);}
+		}
+		@-webkit-keyframes  topq{
+		0%{transform:translateY(0px);}
+		20%{transform:translateY(20px);}
+		40%{transform:translateY(-15px);}
+		60%{transform:translateY(10px);}
+		80%{transform:translateY(-5px);}
+		100%{transform:translateY(0px);}
+		}
+		@-webkit-keyframes  sca{
+		0%{transform:scale(1);}
+		20%{transform:scale(1.2);}
+		40%{transform:scale(0.8);}
+		60%{transform:scale(1.1);}
+		80%{transform:scale(0.9);}
+		100%{transform:scale(1);}
+		}
+  </style>
+ </head>
+ <body>
+	<div id="dome">
+		<ul>
+			<li>
+				<H2>刘欢</H2>
+				<img src="images/1.jpg"/>
+			</li>
+			<li>
+				<H2>奔宝</H2>
+				<img src="images/2.jpg"/>
+			</li>
+			<li>
+				<H2>敏哥</H2>
+				<img src="images/3.jpg"/>
+			</li>
+			<li>
+				<H2>攀姐</H2>
+				<img src="images/4.jpg"/>
+			</li>
+			<li>
+				<H2>王金宝</H2>
+				<img src="images/5.jpg"/>
+			</li>
+			<li>
+				<H2>薇姐</H2>
+				<img src="images/6.jpg"/>
+			</li>
+		</ul>
+	</div>
+	<script src="js/jquery.js"/></script>
+	<script>
+		$(function(){
+			var anim = ['rot','topq','sca'];
+			var a,b;
+			//hover   2
+			//mouseenter  1
+			$("#dome ul li").hover(function(){
+				//alert("我喜欢你们！");
+				//a = anim[Math.floor(Math.random()*3)];
+					while(b==a){
+					a = anim[Math.floor(Math.random()*3)];
+					//alert(a);
+				}
+					$(this).toggleClass(a);
+					b = a;
+					//alert(b);
+				
+			},function(){
+				$(this).toggleClass(a);
+			});
+		});
+	</script>
+<!--总结
+1.body
+2.需要用到div盒子模型 ul无序列表
+
+
+-->
+ </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>支持iOS安卓html5播放器代码</title>
+
+
+
+<style type="text/css">
+body { background:#ffffff; }
+.mark{color:#FF5A15;}
+.blue{color:blue;}
+.green{color:green;}
+.red{color:red;}
+.cGray,a.cGray:link,a.cGray:visited{ color:#6D6359; }
+.cOrange2,a.cOrange2:link,a.cOrange2:visited{ color:#ce0400; }
+.cOrange3,a.cOrange3:link,a.cOrange3:visited{ color:#ce0400;text-decoration:underline; }
+a.cOrange3:hover{  color:#6D6359; }
+.f12,h5{font-size:12px; font-weight:normal;}
+.cGreen2,a.cGreen2:link,a.cGreen2:visited{ color:#336600; }
+.en {font-family:Verdana, Arial, Helvetica, sans-serif,"宋体"; }
+
+div#code {background:#ffffff;}
+fieldset{border:1px #cccccc solid;padding:10px;margin-bottom:10px;display:block; font-family:Verdana, Arial, Helvetica, sans-serif;line-height:28px; text-align:left; background:#ffffff;}
+fieldset dl dt { line-height:28px;font-weight:bold; display:inline;}
+fieldset dl dd { line-height:28px; display:inline;}
+</style>
+
+<!--必要样式-->
+<link rel="stylesheet" type="text/css" href="styles.css" media="all" >
+
+</head>
+<body>
+
+
+<div id="myAudio" style="margin:50px auto 0 auto;">
+	<audio>
+		<source title="王若琳 - Wild World.mp3" src="http://rm.sina.com.cn/wm/VZ2010050511043310440VK/music/MUSIC1005051622027270.mp3" />
+		<source title="韦礼安 - 还是会.mp3" src="http://music.huoxing.com/upload/20121215/1355575227640_8200.mp3" />
+		<source title="王若琳 - Lost in paradise.mp3" src="http://rm.sina.com.cn/wm/VZ200812161100307607VK/music/MUSIC0812161100379667.mp3" />
+		<source title="郁可唯 - 时间煮雨.mp3" src="http://rm.sina.com.cn/wm/VZ200708161037153290VK/music/1.mp3/20091229/90e6ba45adf30ca3abfe28.mp3" />
+		<source title="王若琳 - 三个人的晚餐.mp3" src="http://rm.sina.com.cn/wm/VZ2010050511043310440VK/music/MUSIC1005051622027270.mp3" />
+		<source title="王若琳 - I Love You.mp3" src="http://rm.sina.com.cn/wm/VZ200812161100307607VK/music/MUSIC0812161100379667.mp3" />
+		<source title="王若琳 - Lemon Tree(中文版).mp3" src="http://rm.sina.com.cn/wm/VZ200708161037153290VK/music/1.mp3/20091229/90e6ba45adf30ca3abfe28.mp3" />
+		<source title="王若琳 - 亲密爱人.mp3" src="http://rm.sina.com.cn/wm/VZ2010050511043310440VK/music/MUSIC1005051622027270.mp3" />
+	</audio>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/AudioPlayer.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#myAudio").initAudio();
+});
+</script>
+
+<!--line-->
+<div style="width:720px;margin:50px auto 0 auto;">
+	<fieldset>
+	<legend><h4>播放器介绍</h4></legend>
+	  <p> html5音乐播放器跨平台支持苹果ios和安卓(html5音乐网页播放器)(<span class="cRed2">提示：请在IIS下或其它网站环境下测试</span>)：</p>
+	  <p> 1.支持跨平台支持苹果ios和安卓(html5音乐网页播放器)；<br />
+		2.支持mp3音乐格式；<br />
+		3.支持音量控制(默认为75)；<br />
+		4.显示视频总时长和当前播放进度的位置时间；<br />
+		5.支持列表自动连播；<br />
+		6.支持ASP,PHP,.NET等程序，可以实现后台管理视频的功能；<br />
+		7.可以与动易、织梦、帝国等各类CMS系统结合，实现与此类CMS系统后台的融合；<br />
+		8.代码简洁明了，界面美观，适合各类网站使用。</p>
+	</fieldset>
+</div>
+
+</body>
+</html>

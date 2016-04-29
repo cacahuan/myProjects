@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="caca" content="">
+  <title>MV库</title>
+ </head>
+ <style type="text/css">
+	*{margin:0;padding:0;}
+	*{margin:0;padding:0;}
+	a{text-decoration:none;color:#fff}
+	li{list-style:none;}
+	body{font-size:15px;font-family:"微软雅黑";color:#707070;background:#aaaaaa;}
+
+	/*m-top start*/
+		#mc{width:100%;height:900px;}
+		#mc .m-top{width:100%;height:50px;background:rgba(0,0,0,.8);}
+		#mc .m-top .t-head{width:1300px;height:50px;margin:0 auto;}
+		#mc .m-top .t-head .h-logo{width:200px;height:50px;float:left;}
+		#mc .m-top .t-head .h-logo img{border:0;display:block;width:126px;height:30px;margin: 10px 0 0 36px;}
+		#mc .m-top .t-head .h-nav{width:600px;height:50px;float:left;}
+		#mc .m-top .t-head .h-nav ul li{float:left;height:50px;font-size:16px;line-height:50px;
+		margin-left:15px;margin-right:15px;text-align:center;position:relative;}
+		#mc .m-top .t-head .h-nav .n-xiala1{width:400px;height:50px;background:#8c8c8c;position:absolute;top:50px;left:0;display:none;}
+		#mc .m-top .t-head .h-nav .n-xiala2{width:200px;height:50px;background:#8c8c8c;position:absolute;top:50px;left:0;display:none;}
+		#mc .m-top .t-head .h-nav .n-xiala ul{height:50px;margin:0 auto;}
+		#mc .m-top .t-head .h-nav ul li a{color:#fff;}
+		#mc .m-top .t-head .h-nav ul li .a{color:#d7d7d7;display:block;height:50px;}
+		#mc .m-top .t-head .h-nav ul li .a:hover{background:#414141;color:#fff;}
+		#mc .m-top .t-head .h-nav ul li:hover .n-xiala1{display:block;z-index:999;}
+		#mc .m-top .t-head .h-nav ul li:hover .n-xiala2{display:block;z-index:999;}
+		#mc .m-top .t-head .h-search{width:300px;height:50px;float:left;}
+		#mc .m-top .t-head .h-search input{width:210px;height:30px;border:0px;outline:none;float:left;margin-top:10px;padding-left:10px;}
+		#mc .m-top .t-head .h-search a{font-size:14px;color:#fff;display:block;width:80px;height:30px;float:left;
+		background:#99cccc;text-align:center;line-height:30px;margin-top:10px;}
+		#mc .m-top .t-head .h-login{width:86px;height:50px;float:right;}
+		#mc .m-top .t-head .h-login a{width:40px;height:50px;display:block;color:#d7d7d7;font-size:14px;line-height:50px;text-align:center;}
+		#mc .m-top .t-head .h-login a:hover{color:#fff;}
+		#mc .m-top .t-head .h-login .l_login{float:left;}
+		#mc .m-top .t-head .h-login .l_register{float:right;}
+		#mc .m-top .t-head .h-login span{color:#fff;line-height:50px;}
+
+		/*main start*/
+		#mc .main{width:80%;height:765px;border:1px solid red;margin:20px auto;}
+		#mc .main .head{width:100%;height:70px;background:#b5acae;font-size:20px;float:left;}
+		#mc .main .head p{font-size:18px;line-height:70px;margin-left:40px;}
+		#mc .main .head .head-title{width:110px;height:40px;margin:-71px 137px;font-size:24px;line-height:40px;}
+		#mc .main .head .head-right{width:530px;height:28px;margin:70px 130px;}
+		#mc .main .head .head-right ul li{float:left;font-size:15px;padding:10px;}
+		#mc .main .head .head-right a:hover{color:#00ff33;}
+		/*main.left start*/
+		#mc .main .left{width:130px;height:693px;background:#afa5a9;float:left;}
+		#mc .main .left .left-list{width:100%;height:60px;float:left;font-size:13px;line-height:60px;text-align:center;}
+		#mc .main .left .left-list a{color:#fff;}
+		#mc .main .left .left-list span{width:20px;height:20px;background:red;color:#fff;font-size:20px;margin-left:5px;}
+		#mc .main .left .left-list a:hover{color:#33ffff;}
+		/*main.right start*/
+		#mc .main .right{width:1000px;height:693px;border:1px solid red;float:right;}
+		#mc .main .right .right-list{width:170px;height:150px;float:left;margin:27px 14px;}
+		#mc .main .right .right-list a{font-size:14px;color:#8b8b8b;}
+		#mc .main .right .right-list a:hover{color:#00ff00;}
+		#mc .main .right .right-list p{font-size:10px;}
+		#mc .main .right .right-bottom{width:450px;height:25px;float:left;margin:40px 460px;}
+		#mc .main .right .right-bottom input{margin:7px 6px;}
+		#mc .main .right .right-bottom p{float:left;font-size:12px;line-height:25px;}
+		#mc .main .right .right-bottom ul li{float:left;line-height:25px;margin-right:10px;}
+		#mc .main .right .right-bottom a:hover{color:#8b8b8b;}
+		#mc .main .right .right-bottom ul li input{width:40px;height:15px;outline:none;margin-top:3px;}
+		#mc .main .right .right-bottom ul li img{width:32px;height:28px;margin:0px -7px;}
+		#mc .main .right .right-bottom ul li img:hover{background:#847b7b;}
+
+ </style>
+
+ <body>
+  <!--顶部开始-->
+	<div id="mc">
+		<div class="m-top">
+			<div class="t-head">
+				<div class="h-logo">
+					<a href="#"><img src="images/logo.png" alt="mc音乐网站"/></a>
+				</div>
+				<div class="h-nav">
+					<ul>
+						<li style="margin-left:60px;"><a class="a" href="#">首页</a></li>
+						<li>
+							<a class="a" href="#">音乐</a>
+							<div class="n-xiala1">
+								<ul>
+									<li><a href="#">音乐推荐</a></li>
+									<li><a href="#">歌单广场</a></li>
+									<li><a href="#">歌手</a></li>
+									<li><a href="#">专辑</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a class="a" href="#">MV</a>
+							<div class="n-xiala2">
+								<ul>
+									<li><a href="#">MV推荐</a></li>
+									<li><a href="file:///C:/Users/Administrator/Desktop/Project/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/MV%E5%BA%93/index.html#">MV库</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a class="a" href="#">音乐资讯</a></li>
+						<li><a class="a" href="#">我的音乐盒</a></li>
+						<li><a class="a" href="#">关于作者</a></li>
+					</ul>
+				</div>
+				<div class="h-search">
+					<input type="text" placeholder="搜索歌曲,专辑,MV"><a href="#">搜索</a>
+				</div>
+				<div class="h-login">
+					<a class="l_login" href="file:///C:/Users/Administrator/Desktop/Project/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2/index.html">登录</a><span>|</span><a class="l_register" href="file:///C:/Users/Administrator/Desktop/Project/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/%E6%B3%A8%E5%86%8C%E7%95%8C%E9%9D%A2/index.html">注册</a>
+				</div>
+			</div>
+		</div>
+		<!--顶部结束-->
+
+		<!--主体部分开始-->
+		<div class="main">
+			<!--主体头部部分开始-->
+			<div class="head">
+				<p>全部</p>
+				<div class="head-title">首发MV</div>
+				<div class="head-right">
+					<ul>
+						<li><a href="#">10-07</a></li>
+						<li><a href="#">10-06</a></li>
+						<li><a href="#">10-05</a></li>
+						<li><a href="#">10-04</a></li>
+						<li><a href="#">10-03</a></li>
+						<li><a href="#">10-02</a></li>
+						<li><a href="#">10-01</a></li>
+						<li><a href="#">更多...</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--主体头部部分结束-->
+
+			<!--主体左边部分开始-->
+			<div class="left">
+				<div class="left-list"><a href="#">网络热播</a></div>
+				<div class="left-list"><a href="#">经典流行</a></div>
+				<div class="left-list"><a href="#">LIVE现场</a></div>
+				<div class="left-list"><a href="#">华语精选</a></div>
+				<div class="left-list"><a href="#">欧美精选</a></div>
+				<div class="left-list"><a href="#">日韩精选</a></div>
+				<div class="left-list"><a href="#">新歌推荐</a></div>
+			</div>
+			<!--主体左边部分结束-->
+			<!--主体右边部分开始-->
+			<div class="right">
+				<div class="right-list">
+					<img src="images/1.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<div class="right-list">
+					<img src="images/2.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<div class="right-list">
+					<img src="images/3.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<div class="right-list">
+					<img src="images/4.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<div class="right-list">
+					<img src="images/5.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<div class="right-list">
+					<img src="images/6.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<div class="right-list">
+					<img src="images/7.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<div class="right-list">
+					<img src="images/8.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<div class="right-list">
+					<img src="images/9.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<div class="right-list">
+					<img src="images/10.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<div class="right-list">
+					<img src="images/11.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<div class="right-list">
+					<img src="images/12.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<div class="right-list">
+					<img src="images/13.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<div class="right-list">
+					<img src="images/14.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<div class="right-list">
+					<img src="images/15.jpg" width="170px" height="150px"/>
+					<a href="#">七里香</a>
+					<p>周杰伦</p>
+				</div>
+				<!--主体右边部分底部开始-->
+				<div class="right-bottom">
+					<ul>
+						<li><p><a href="#">首页</a></p></li>
+						<li><p><a href="#">上一页</a></p></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+						<li><a href="#">8</a></li>
+						<li><p><a href="#">下一页</a></p></li>
+						<li><p><a href="#">尾页</a></p></li>
+						<li><p>第</p></li>
+						<li><input type="text"></li>
+						<li><p>页</p></li>
+						<li><a href="#"><img src="images/3.png"/></a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<!--主体右边部分结束-->
+		</div>
+	</div>
+	<!--主体部分开始-->	
+ </body>
+</html>

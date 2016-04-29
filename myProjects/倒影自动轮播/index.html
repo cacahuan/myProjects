@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <!--声明当前页面的编码格式 UTF-8（国际编码）gbk(中文简体)-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<!--声明当前页面的三要素-->
+	<title>标题</title>
+	<meta name="Keywords" content="关键字">
+	<meta name="Description" content="描述">
+  <!--样式 css 变漂亮 衣柜-->
+  <style type="text/css">
+	 *{margin:0px; padding:0px;} /*	* 是通配符，代表所有的标签！ margin 外边距 padding 内边距*/
+	body{background:url("img/b1.jpg") 100% center; height:680px;}
+	#main{position:fixed; top:196px; left:-28px; width:720px; height:350px; perspective:1000px;/*眼睛看元素的距离3D 下*/ }
+	#main .box, #main .box2{width:720px; height:190px; cursor:pointer; background:#000; position:relative; overflow:hidden;}
+    #main .box2{transform: rotateX(-110deg); top:-10px; left:0px; opacity:0.5; }
+	ul{width:1920px;position:absolute; left:0px; top:0px;  animation: slide2 20S linear infinite;}
+	li{list-style:none; float:left;margin:20px 5px;}
+	/*svg 矢量图形画线条*/
+	svg{position:absolute; left:-800px; top:3px; animation: slide 12S linear infinite;}
+	svg line{stroke:#fff; stroke-dasharray:15 20; fill:none;}
+	svg line.top{ stroke-width:27px;}
+	svg line.bottom{stroke-width:14px; }
+	/*动画规则 动画名称*/
+		@keyframes slide {
+		from { left : -800px ; } /* 从{ .... } */
+		to { left : 0px; } /* 到{ .... } */
+		}
+		@keyframes slide2 {
+		from { left : 0px ; } /* 从{ .... } */
+		to { left : -800px; } /* 到{ .... } */
+		}
+  </style>
+ </head>
+ <body>
+	<div id="main">
+		<div class="box">
+			<ul>
+				<li><img src="img/1.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/2.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/3.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/4.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/5.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/1.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/2.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/3.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/4.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/5.jpg" width="250px" height="250px"/></li>
+			</ul>
+			<svg xmlns="http://www.w3.org/2000/svg" width="300%" height="100%">
+				<line class="top" x1="0" y1="0" x2="1900" y2="0"></line>
+				<line class="bottom" x1="0" y1="178" x2="1900" y2="178"></line>
+			</svg>
+		</div>
+		<div class="box2">
+			<ul>
+				<li><img src="img/1.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/2.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/3.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/4.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/5.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/1.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/2.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/3.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/4.jpg" width="250px" height="250px"/></li>
+				<li><img src="img/5.jpg" width="250px" height="250px"/></li>
+			</ul>
+			<svg xmlns="http://www.w3.org/2000/svg" width="300%" height="100%">
+				<line class="top" x1="0" y1="0" x2="1900" y2="0"></line>
+				<line class="bottom" x1="0" y1="178" x2="1900" y2="178"></line>
+			</svg>
+		</div>
+	</div>
+ </body>
+</html>

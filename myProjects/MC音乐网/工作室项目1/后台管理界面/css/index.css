@@ -1,0 +1,60 @@
+*{margin:0;padding:0;}
+	body{font-family:"微软雅黑";color:#000;}
+	a{text-decoration:none;}
+	ul li{list-style:none;text-align:center;}
+	#main{width:100%;height:776px;}
+	/*left部分开始*/
+	#main .left{width:10.6%;height:780px;background:rgba(0,0,0,0.8);position:fixed;top:0;left:0;}
+	#main .left .left-logo{width:150px;height:70px;border-bottom:1px solid #000;background:url("images/");}
+
+	#main .left .left-nav{width:100%;border-bottom:1px solid #414141;}
+	#main .left .left-nav ul li{border-bottom:1px solid #000;border-top:1px solid #414141;font-size:14px;
+	line-height:80px;color:#fff;}
+	#main .left .left-nav ul li a{padding-left:10px;display:block;}
+	#main .left .left-nav ul li a:hover{background:#404040;}
+	#main .left .left-nav ul li a i{width:20px;height:20px;display:block;background:url("images/1.png") no-repeat;float:left;
+	margin-top:30px;}
+	#main .left .left-nav ul li a .icon-1{background-position:-233px -52px;}
+	#main .left .left-nav ul li a .icon-2{background-position:-254px -52px;}
+	#main .left .left-nav ul li a .icon-3{background-position:-211px -52px;}
+	#main .left .left-nav ul li a .icon-4{background-position:-274px -52px;}
+	#main .left .left-nav ul li a .icon-5{background-position:-296px -52px;}
+	#main .left .left-nav ul li a .icon-6{background-position:-315px -44px;}
+	#main .left .left-nav ul li a span{color:#fff;padding-left:0px;}
+	/*left部分结束*/
+
+	/*right-top-left部分开始*/
+	.right-top{width:89.4%;height:70px;background:rgba(0,0,0,.8);float:right;position:absolute;top:0;left:150px;}
+	.right-top .right-top-left{width:968px;height:70px;border-right:1px solid #000;float:left;}
+	.right-top .right-top-left ul li{width:120px;height:70px;float:left;border-left:1px solid #000;}
+	.right-top .right-top-left ul li a{display:block;color:#838383;font-size:15px;line-height:25px;text-align:center;}
+	.right-top .right-top-left ul li a:hover{color:#fff;}
+	.right-top .right-top-left ul li a i{width:20px;height:20px;display:block;background:url("images/1.png") no-repeat;margin:10px auto;}
+	.right-top .right-top-left ul li a .icon-1{background-position:0px 0px;}
+	.right-top .right-top-left ul li a:hover .icon-1{background-position:0px -25px;}
+	.right-top .right-top-left ul li a .icon-2{background-position:-24px 0px;}
+	.right-top .right-top-left ul li a:hover .icon-2{background-position:-24px -25px;}
+	.right-top .right-top-left ul li a .icon-3{background-position:-48px 0px;}
+	.right-top .right-top-left ul li a:hover .icon-3{background-position:-48px -25px;}
+	.right-top .right-top-left ul li a .icon-4{background-position:-68px 0px;}
+	.right-top .right-top-left ul li a:hover .icon-4{background-position:-68px -25px;}
+	.right-top .right-top-left ul li a .icon-5{background-position:-91px 0px;}
+	.right-top .right-top-left ul li a:hover .icon-5{background-position:-91px -25px;}
+	.right-top .right-top-left ul li a .icon-6{background-position:-113px 0px;}
+	.right-top .right-top-left ul li a:hover .icon-6{background-position:-113px -25px;}
+	.right-top .right-top-left ul li a .icon-7{background-position:-133px 0px;}
+	.right-top .right-top-left ul li a:hover .icon-7{background-position:-133px -25px;}
+	.right-top .right-top-left ul li a .icon-8{background-position:-152px 0px;}
+	.right-top .right-top-left ul li a:hover .icon-8{background-position:-152px -25px;}
+	/*right-top-left部分结束*/
+
+	/*right-top-right部分开始*/
+	.right-top .right-top-right{width:220px;height:67px;float:right;padding-right:14px;}
+	.right-top .right-top-right .right-top-right-text{font-size:14px;line-height:24px;color:#fff;float:left;
+	margin:12px 0 0 20px;word-spacing:14px;}
+	.right-top .right-top-right a .right-top-right-img{width:80px;height:70px;float:left;}
+	.right-top .right-top-right a .right-top-right-img i{display:block;font-size:16px;line-height:67px;
+	color:#fff;float:left;margin-left:15px;} 
+	.right-top .right-top-right  a .right-top-right-img span{width:14px;height:28px;display:block;background:url("images/1.png") no-repeat 0 -51px;float:right;margin-top:27px;margin-right:10px;}
+	.right-top .right-top-right a .right-top-right-img:hover{background:#404040;}
+	/*right-top-right部分结束*/

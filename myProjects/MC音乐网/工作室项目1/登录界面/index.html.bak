@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>登录表单界面-momolea</title>
+
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{font-size:12px;font-family:"微软雅黑";color:#bbb;background:url("images/bg.jpg") no-repeat center	top;background-size:cover;}
+			a{text-decoration:none;}
+			/*logo start*/
+			.logo{width:100%;height:100px;margin:100px auto 80px auto;}
+			.logo p{width:500px;height:100px;text-align:center;font-size:80px;line-height:100px;margin:0 auto;
+			color:#fff;font-family:"Vijaya";}
+
+			/*login start*/
+			.login{width:100%;height:267px;}
+			.login .l_form{width:280px;height:247px;margin:-50px auto;padding:10px;}
+			.login .l_form h1{font-size:22px;font-family:'Raleway', 'Lato', Arial, sans-serif;color:#fff;
+								text-shadow:0 2px 1px rgba(0,0,0,0.3);padding-bottom:20px;}
+			.login .l_form h1 a{color:#fff;}
+			.login .l_form h1 a:hover{color:#cacaca;}
+			.login .l_form p{width:280px;height:48px;}
+			.login .l_form p input{width:264px;height:19px;border:1px solid rgba(78,48,67, 0.8);
+									padding:8px 4px 8px	10px;background:rgba(0,0,0,0.15);
+									outline:none;border-radius:2px;box-shadow: 0 1px 0 rgba(255,255,255,0.2), inset 0 1px 1px rgba(0,0,0,0.1);font-family:'Raleway', 'Lato', Arial, sans-serif;font-size:13px;}
+			.login .l_form .checkcode{width:70px;height:43px;border:1px solid #4e3043;}
+			.login .l_form p .r_login{width:170px;height:27px;float:right;position:relative;top:-45px;}
+			
+			.login .l_form p .b_login{width:280px;height:43px;position:absolute;margin-top:-25px;
+									  background:linear-gradient(rgba(99,64,86,0.5),rgba(76,49,65,0.7));color:#fff;
+									  font-size:16px;font-weight:bold;text-shadow:0 1px 0 rgba(0,0,0,0.3);
+									  border-radius:5px;border:1px solid #4e3043;box-shadow:inset 0 1px rgba(255,255,255,0.4), 
+									  0 2px 1px rgba(0,0,0,0.1);display:block;text-decoration:none;text-align:center;line-height:33px;}
+			.login .l_form p .b_login:hover{color:#9f9f9f;}
+			.login .bottom{width:280px;height:30px;margin:65px auto;background:#ada481;border:1px solid #4e3043;border-radius:5px;
+							font-size:13px;text-align:center;line-height:30px;color:#000;}
+		</style>
+	</head>
+<body>
+	<div class="logo">
+		<p>Welcome to Mc</p>
+		
+	</div>
+	<div class="login">
+		<div class="l_form">
+			<h1>登录 | <a href="#">注册</a></h1>
+			<form action="#" method="POST">
+				<p>
+					<input type="text" name="username" placeholder="请输入帐号" required><!--required要求不能为空-->
+				</p>
+				<p>
+					<input type="password" name="password" placeholder="请输入密码" required>
+				</p>
+				<div class="checkcode"></div>
+				<p>
+					<input class="r_login"type="text" name="验证码" placeholder="请输入验证码" required>
+				</p>
+				<p><input class="b_login" type="submit" name="login" value="登    录"></p>
+			</form>
+			
+		</div>
+		<div class="bottom">注：登录后，即您同意用户使用条款</div>
+	</div>
+</body>
+
+</html>

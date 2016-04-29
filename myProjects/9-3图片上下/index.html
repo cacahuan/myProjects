@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+  <style type="text/css">
+  *{margin:0px;padding:0px;}
+  #top{width:100%;height:77px;padding:10px 0px;text-align:center;background:#6600cc;}
+
+  #daoh{width:100%;height:50px;background:url("img/bg.jpg")}
+  #daoh ul{width:980px margin:0px auto;}
+  #daoh ul li{list-style:none;width:250px;height:50px;color:#cc3300;
+			  text-align:center; float:left;line-height:50px;font-family:微软雅黑;}
+  #daoh ul li:hover{background:url("img/hover.jpg");}
+
+  #neirong {width:100%;height:450px;overflow:hidden;box-shadow:3px 6px 5px #00ff00;margin-bottom:100px;position:relative;}
+
+  #neirong .cont{width:100%;position:absolute;top:0px;animation:slider 15s linear infinite;}
+  #neirong .cont li{width:100%;height:450px;}
+  #neirong .cont li:nth-child(1){background:url("img/1.jpg") center;}
+  #neirong .cont li:nth-child(2){background:url("img/2.jpg") center;}
+  #neirong .cont li:nth-child(3){background:url("img/3.jpg") center;}
+  #neirong .cont li:nth-child(4){background:url("img/4.jpg") center;}
+  #neirong .cont li:nth-child(5){background:url("img/5.jpg") center;}
+  @keyframes slider{
+		0%{top:0px;}
+		19%{top:0px;}
+		20%{top:-450px;}
+		39%{top:-450px;}
+		40%{top:-900px;}
+		59%{top:-900px;}
+		60%{top:-1350px;}
+		79%{top:-1350px;}
+		80%{top:-1800px;}
+		99%{top:-1800px;}
+		100%{top:-2250px;}
+  }
+  #neirong .in{width:300px; height:10px; position:absolute; right:60px;  bottom:30px;}
+  #neirong .in li{list-style:none;width:50px; height:10px; color:#FFFFFF; float:left;
+  background:rgba(0,0,0,0.3); margin-right:10px;border-radius:10px;/*css3圆角*/}
+  #neirong .in #xz{position:absolute; left:120px;  top:0px; animation:xz 5S linear infinite ;}
+		@keyframes	xz{
+			0%{left:0px; background:#fec425;}/* 从*/
+			19%{left:0px; background:#fec425;}
+			20%{left:60px; background:#c40002;}
+			39%{left:60px;  background:#c40002;}
+			40%{left:120px;  background:#f06a23;}/* 从*/
+			59%{left:120px;  background:#f06a23;}
+			60%{left:180px; background:#ffffff;}
+			79%{left:180px; background:#ffffff;}
+			80%{left:240px; background:#1363a0;}
+			99%{left:240px; background:#1363a0;}
+			100%{left:0px;background:#fec425;}/*到*/
+		}
+  </style>
+ </head>
+
+ <body>
+	<div id="top">
+		<img src="img/logo.png" />
+	</div>
+	<div id="daoh">
+	  <ul>
+		<li>首页</li>
+		<a href=#><li>关于我们</li></a>
+		<a href=#><li>精品推荐</li></a>
+		<a href=#><li>在线服务</li></a>
+		<a href=#><li>鉴定专家</li></a>
+		<a href=#><li>作品征集</li></a>
+	  </ul>
+	</div>
+
+    <div id="neirong">
+		<ul class="cont">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<ul class="in">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li id="xz"></li>
+		</ul>
+	</div>
+ </body>
+
+</html>

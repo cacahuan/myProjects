@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<title>微博评论效果-momolela</title>
+		<!--当前页面的三要素用于SEO优化-->
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="descriptior" content=""><!--用于seo优化80个字的描绘信息-->
+		<!--<meta http-equiv="reflash" content="30"><!--30秒后自动刷新-->
+		<!--<meta http-equiv="reflash" content="5;url=index.html"><!--5秒后自动跳转到index.html-->
+
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{background:url("images/bg1.jpg");font-size:12px;font-family:"微软雅黑";color:#666;}
+			img{border:0;}
+			.qq{width:600px;height:165px;background:#fff;margin:50px auto;border-radius:4px;position:relative;}
+			.qq .q_title{font-size:14px;padding:10px 0 10px 20px;}
+			.qq .q_meg{width:540px;height:50px;border:1px solid #ccc;margin:0 auto;padding:10px;}/*太大会往下撑*/
+			.qq .q_meg img{margin:3px;}
+			.qq .q_face{width:600px;height:40px;}
+			.qq .q_face a{float:left;}
+			.qq .q_face .f_box{margin:13px 0 0 20px;}
+			.qq .q_face .btn{width:82px;height:30px;background:#ff8104;display:block;text-align:center;line-height:30px;text-decoration:none;font-size:14px;font-weight:bold;border-radius:3px;color:#fff;float:right;margin:13px 20px 0 0px;}
+			.qq .q_face .btn:hover{background:#f7671d;}
+			.qq .q_wb{width:365px;height:182px;background:#fff;border:1px solid #d0d0d0;box-shadow:1px 1px 8px #d0d0d0;display:none;position:absolute;top:150px;left:20px;z-index:1;}
+			.qq .q_wb ul li{list-style:none;float:left;margin:2px;padding:2px;cursor:pointer;}
+			.meg_box .m_list{width:590px;height:110px;background:#fff;margin:10px auto;border-radius:3px;padding:10px 0 0 10px;z-index:0;}
+			.m_list .m_header{width:500px;height:50px;}
+			.m_list .m_header img{border-radius:25px;}
+			.m_list .m_header a{height:50px;line-height:50px;display:block;float:left;margin-right:20px;text-decoration:none;color:#666;font-size:14px;font-weight:bold;}
+			.m_list .m_con{height:30px;line-height:30px;margin-left:75px;}
+			.m_list .m_time{width:120px;height:20px;float:right;margin:0px 20px 0 0px;color:#666;font-size:14px;font-family:"微软雅黑";font-weight:bold;}
+		</style>
+		<link type="text/css" rel="stylesheet" href="css/animate.css"></link>
+	</head>
+
+	<body>
+		<div class="qq">
+			<p class="q_title">有什么新鲜事想告诉大家？</p>
+			<div class="q_meg" contentEditable="true"></div>
+			<p class="q_face">
+				<a href="#" class="f_box">
+					<img src="images/face/12.gif" alt="表情" width="22px" height="22px"/>
+				</a>
+				<a href="#" class="btn">发布</a>
+			</p>
+			<div class="q_wb">
+				<ul id="q_ul">
+					<li><img src="images/face/1.gif" width="20" height="20"/></li>
+					<li><img src="images/face/2.gif" width="20" height="20"/></li>
+					<li><img src="images/face/3.gif" width="20" height="20"/></li>
+					<li><img src="images/face/4.gif" width="20" height="20"/></li>
+					<li><img src="images/face/5.gif" width="20" height="20"/></li>
+					<li><img src="images/face/6.gif" width="20" height="20"/></li>
+					<li><img src="images/face/7.gif" width="20" height="20"/></li>
+					<li><img src="images/face/8.gif" width="20" height="20"/></li>
+					<li><img src="images/face/9.gif" width="20" height="20"/></li>
+					<li><img src="images/face/10.gif" width="20" height="20"/></li>
+					<li><img src="images/face/11.gif" width="20" height="20"/></li>
+					<li><img src="images/face/12.gif" width="20" height="20"/></li>
+					<li><img src="images/face/13.gif" width="20" height="20"/></li>
+					<li><img src="images/face/14.gif" width="20" height="20"/></li>
+					<li><img src="images/face/15.gif" width="20" height="20"/></li>
+					<li><img src="images/face/17.gif" width="20" height="20"/></li>
+					<li><img src="images/face/18.gif" width="20" height="20"/></li>
+					<li><img src="images/face/19.gif" width="20" height="20"/></li>
+					<li><img src="images/face/20.gif" width="20" height="20"/></li>
+					<li><img src="images/face/21.gif" width="20" height="20"/></li>
+					<li><img src="images/face/22.gif" width="20" height="20"/></li>
+					<li><img src="images/face/23.gif" width="20" height="20"/></li>
+					<li><img src="images/face/24.gif" width="20" height="20"/></li>
+					<li><img src="images/face/25.gif" width="20" height="20"/></li>
+					<li><img src="images/face/26.gif" width="20" height="20"/></li>
+					<li><img src="images/face/28.gif" width="20" height="20"/></li>
+					<li><img src="images/face/29.gif" width="20" height="20"/></li>
+					<li><img src="images/face/30.gif" width="20" height="20"/></li>
+					<li><img src="images/face/31.gif" width="20" height="20"/></li>
+					<li><img src="images/face/32.gif" width="20" height="20"/></li>
+					<li><img src="images/face/33.gif" width="20" height="20"/></li>
+					<li><img src="images/face/34.gif" width="20" height="20"/></li>
+					<li><img src="images/face/35.gif" width="20" height="20"/></li>
+					<li><img src="images/face/36.gif" width="20" height="20"/></li>
+					<li><img src="images/face/37.gif" width="20" height="20"/></li>
+					<li><img src="images/face/38.gif" width="20" height="20"/></li>
+					<li><img src="images/face/39.gif" width="20" height="20"/></li>
+					<li><img src="images/face/40.gif" width="20" height="20"/></li>
+					<li><img src="images/face/41.gif" width="20" height="20"/></li>
+					<li><img src="images/face/42.gif" width="20" height="20"/></li>
+					<li><img src="images/face/43.gif" width="20" height="20"/></li>
+					<li><img src="images/face/44.gif" width="20" height="20"/></li>
+					<li><img src="images/face/45.gif" width="20" height="20"/></li>
+					<li><img src="images/face/46.gif" width="20" height="20"/></li>
+					<li><img src="images/face/47.gif" width="20" height="20"/></li>
+					<li><img src="images/face/48.gif" width="20" height="20"/></li>
+					<li><img src="images/face/49.gif" width="20" height="20"/></li>
+					<li><img src="images/face/50.gif" width="20" height="20"/></li>
+					<li><img src="images/face/51.gif" width="20" height="20"/></li>
+					<li><img src="images/face/52.gif" width="20" height="20"/></li>
+					<li><img src="images/face/53.gif" width="20" height="20"/></li>
+					<li><img src="images/face/54.gif" width="20" height="20"/></li>
+					<li><img src="images/face/55.gif" width="20" height="20"/></li>
+					<li><img src="images/face/56.gif" width="20" height="20"/></li>
+					<li><img src="images/face/57.gif" width="20" height="20"/></li>
+					<li><img src="images/face/58.gif" width="20" height="20"/></li>
+					<li><img src="images/face/59.gif" width="20" height="20"/></li>
+					<li><img src="images/face/60.gif" width="20" height="20"/></li>
+					<li><img src="images/face/61.gif" width="20" height="20"/></li>
+					<li><img src="images/face/62.gif" width="20" height="20"/></li>
+					<li><img src="images/face/63.gif" width="20" height="20"/></li>
+					<li><img src="images/face/64.gif" width="20" height="20"/></li>
+					<li><img src="images/face/65.gif" width="20" height="20"/></li>
+					<li><img src="images/face/66.gif" width="20" height="20"/></li>
+					<li><img src="images/face/67.gif" width="20" height="20"/></li>
+					<li><img src="images/face/68.gif" width="20" height="20"/></li>
+					<li><img src="images/face/69.gif" width="20" height="20"/></li>
+					<li><img src="images/face/70.gif" width="20" height="20"/></li>
+					<li><img src="images/face/71.gif" width="20" height="20"/></li>
+					<li><img src="images/face/72.gif" width="20" height="20"/></li>
+					<li><img src="images/face/73.gif" width="20" height="20"/></li>
+					<li><img src="images/face/74.gif" width="20" height="20"/></li>
+					<li><img src="images/face/75.gif" width="20" height="20"/></li>
+					<li><img src="images/face/76.gif" width="20" height="20"/></li>
+					<li><img src="images/face/77.gif" width="20" height="20"/></li>
+					<li><img src="images/face/78.gif" width="20" height="20"/></li>
+					<li><img src="images/face/79.gif" width="20" height="20"/></li>
+					<li><img src="images/face/80.gif" width="20" height="20"/></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="meg_box">
+		</div>
+	
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//展开表情图片和关闭
+				$(".f_box").click(function(){
+					$(".q_wb").toggle("200");//滚动执行
+				});
+
+				//点击表情图片
+				$("#q_ul").find("li").click(function(){
+					var img=$(this).find("img").clone();
+					$(".q_meg").append(img);
+				});
+
+				//点击发布按钮
+				$(".btn").click(function(){
+					myDate=new Date();
+					var hours=myDate.getHours();
+					var minutes=myDate.getMinutes();
+					minutes=minutes>9?minutes:"0"+minutes;
+					var content=$(".q_meg").text();
+					if(content=="")
+					{
+						$(".q_meg").focus();
+						return;
+					}
+					
+					var html=$("<div class='m_list animated tada'>"+
+								"<div class='m_header'>"+
+								"<a href='#'><img src='images/momolela.jpg'"+
+								"alt='头像' width='50' height='50'/></a>"+
+								"<a href='#'>momolela</a>"+
+								"</div>"+
+								"<div class='m_con'>"+
+								""+$(".q_meg").html()+""+
+								"</div>"+
+								"<div class='m_time'>"+
+								"发布时间:"+
+								""+hours+""+
+								" : "+
+								""+minutes+""+
+								"</div>"+
+								"</div>");
+					$(".meg_box").prepend(html);
+				});
+
+				//点击enter按钮也实现发布效果
+				$(document).on('keyup',function(e){
+					if(e.keyCode===13)
+					{
+						//alert("这是回车键");
+						myDate=new Date();
+						var hours=myDate.getHours();
+						var minutes=myDate.getMinutes();
+						minutes=minutes>9?minutes:"0"+minutes;
+						var content=$(".q_meg").text();
+						if(content=="")
+						{
+							$(".q_meg").focus();
+							return;
+						}
+						
+						var html=$("<div class='m_list animated bounceIn'>"+
+									"<div class='m_header'>"+
+									"<a href='#'><img src='images/momolela.jpg'"+
+									"alt='头像' width='50' height='50'/></a>"+
+									"<a href='#'>momolela</a>"+
+									"</div>"+
+									"<div class='m_con'>"+
+									""+$(".q_meg").html()+""+
+									"</div>"+
+									"<div class='m_time'>"+
+									"发布时间:"+
+									""+hours+""+
+									" : "+
+									""+minutes+""+
+									"</div>"+
+									"</div>");
+						$(".meg_box").prepend(html);
+						return false;
+					}
+				});
+
+				/*//鼠标移动到发布的评论上的效果
+				$(".m_list").hover(function()
+				{
+
+					//toggleClass判断样式是否已经存在  存在就删除  不存在就添加
+					//flip也是css中的样式  toggleClass函数时jquery中的
+					$(this).toggleClass("bounceIn").addClass("shake");
+				},function()
+				{
+					$(this).toggleClass("shake").addClass("bounceIn");
+				});*/
+			});
+		</script>
+	</body>
+
+</html>

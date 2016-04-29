@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="caca" content="">
+  <title>歌单广场</title>
+ </head>
+ <style type="text/css">
+	*{margin:0;padding:0;}
+	body{font-size:15px;font-family:"微软雅黑";color:#707070;background:#9e9e9e;}
+	a{text-decoration:none;color:#fff;font-size:15px;}
+	ul li{list-style:none;}
+	/*m-top start*/
+	.top{width:100%;height:50px;}
+	.top .m-top{width:100%;height:50px;background:rgba(0,0,0,.8);}
+	.top .m-top .t-head{width:1300px;height:50px;margin:0 auto;}
+	.top .m-top .t-head .h-logo{width:200px;height:50px;float:left;}
+	.top .m-top .t-head .h-logo img{border:0;display:block;width:126px;height:30px;margin: 10px 0 0 36px;}
+	.top .m-top .t-head .h-nav{width:600px;height:50px;float:left;}
+	.top .m-top .t-head .h-nav ul li{float:left;height:50px;font-size:16px;line-height:50px;
+			margin-left:15px;margin-right:15px;text-align:center;position:relative;list-style:none;}
+	.top .m-top .t-head .h-nav .n-xiala1{width:400px;height:50px;background:#8c8c8c;position:absolute;top:50px;left:0;display:none;}
+	.top .m-top .t-head .h-nav .n-xiala2{width:200px;height:50px;background:#8c8c8c;position:absolute;top:50px;left:0;display:none;}
+	.top .m-top .t-head .h-nav .n-xiala ul{height:50px;margin:0 auto;}
+	.top .m-top .t-head .h-nav ul li a{color:#fff;}
+	.top .m-top .t-head .h-nav ul li .a{color:#d7d7d7;display:block;height:50px;}
+	.top .m-top .t-head .h-nav ul li .a:hover{background:#414141;color:#fff;}
+	.top .m-top .t-head .h-nav ul li:hover .n-xiala1{display:block;z-index:999;}
+	.top .m-top .t-head .h-nav ul li:hover .n-xiala2{display:block;z-index:999;}
+	.top .m-top .t-head .h-search{width:300px;height:50px;float:left;}
+	.top .m-top .t-head .h-search input{width:210px;height:30px;border:0px;outline:none;float:left;margin-top:10px;padding-left:10px;}
+	.top .m-top .t-head .h-search a{font-size:14px;color:#fff;display:block;width:80px;height:30px;float:left;
+			background:#99cccc;text-align:center;line-height:30px;margin-top:10px;}
+	.top .m-top .t-head .h-login{width:86px;height:50px;float:right;}
+	.top .m-top .t-head .h-login a{width:40px;height:50px;display:block;color:#d7d7d7;font-size:14px;line-height:50px;text-align:center;}
+	.top .m-top .t-head .h-login a:hover{color:#fff;}
+	.top .m-top .t-head .h-login .l_login{float:left;}
+	.top .m-top .t-head .h-login .l_register{float:right;}
+	.top .m-top .t-head .h-login span{color:#fff;line-height:50px;}	
+	/*m-top end*/
+	/*main start*/
+	.main{width:80%;height:700px;margin:25px auto;background:#9e9e9e;}
+	.main .head{width:100%;height:70px;background:#b7b6be;}
+	.main .head .head-left{width:160px;height:68px;float:left;font-size:19px;line-height:58px;}
+	.main .head .head-right{width:950px;height:68px;float:right;}
+	.main .head .head-right ul li{float:left;padding:10px;line-height:67px;font-size:15px;}
+	.main .head .head-right a:hover{color:#00ff66;}
+	.main .left{width:160px;height:620px;float:left;background:#afa5a9;}
+	.main .left .left-list{width:100%;height:122px;}
+	.main .left .left-list ul li{float:left;padding:5px;font-size:13px;}
+	.main .left .left-list a:hover{color:#33ffff;}
+	.main .right{width:950px;height:620px;float:right;background:#afa5a9;}
+	.main .right .right-top{width:100%;height:250px;}
+	.main .right .right-top .right-top-list{width:225px;height:200px;float:left;margin-left:16.5px;}
+	.main .right .right-top .right-top-list a:hover{color:#00ff66;}
+	.main .right .right-top .a .right-top-list{margin-left:0;}
+	
+	.main .right .right-bottom{width:100%;height:370px;border:1px solid red;}
+	.main .right .right-bottom .right-bottom-top{width:100%;height:40px;}
+	.main .right .right-bottom .right-bottom-top p{font-size:19px;line-height:40px;margin-left:7px;float:left;color:#00ff66;}
+	.main .right .right-bottom .right-bottom-top img{float:left;padding:5px 7px;}
+	.main .right .right-bottom .right-bottom-top img:hover{background:url("images/1.png") no-repeat;background-position:7px 5px;}
+	.main .right .right-bottom .right-bottom-list{width:100%;height:25px;border:1px solid red;margin-top:8px;}
+	.main .right .right-bottom .right-bottom-list1{width:600px;height:25px;margin:12px 440px;}
+	.main .right .right-bottom input{margin:7px 6px;float:left;}
+	.main .right .right-bottom p{float:left;font-size:13px;line-height:25px;}
+	.main .right .right-bottom .right-bottom-list1 ul li{float:left;line-height:25px;margin-right:10px;}
+	.main .right .right-bottom .right-bottom-list1 a:hover{color:#8b8b8b;}
+	.main .right .right-bottom .right-bottom-list1 ul li input{width:40px;height:15px;outline:none;margin-top:3px;}
+	.main .right .right-bottom .right-bottom-list1 ul li img{width:32px;height:32px;margin:-2px -7px;}
+	.main .right .right-bottom .right-bottom-list1 ul li img:hover{background:#847b7b;}
+	/*main end*/
+
+	/*bottom start*/
+	.bottom{width:80%;height:40px;margin:-20px auto;}
+	.bottom p{color:#000;width:100%;height:40px;text-align:center;line-height:40px;font-size:12px;}
+ </style>
+
+ <body>
+
+	<!--顶部开始-->
+	<div class="top"><div class="m-top">
+			<div class="t-head">
+				<div class="h-logo">
+					<a href="#"><img src="images/logo.png" alt="mc音乐网站"/></a>
+				</div>
+				<div class="h-nav">
+					<ul>
+						<li style="margin-left:60px;"><a class="a" href="#">首页</a></li>
+						<li>
+							<a class="a" href="#">音乐</a>
+							<div class="n-xiala1">
+								<ul>
+									<li><a href="#">音乐推荐</a></li>
+									<li><a href="#">歌单广场</a></li>
+									<li><a href="#">歌手</a></li>
+									<li><a href="#">专辑</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a class="a" href="#">MV</a>
+							<div class="n-xiala2">
+								<ul>
+									<li><a href="#">MV推荐</a></li>
+									<li><a href="#">MV库</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a class="a" href="#">音乐资讯</a></li>
+						<li><a class="a" href="#">我的音乐盒</a></li>
+						<li><a class="a" href="#">关于作者</a></li>
+					</ul>
+				</div>
+				<div class="h-search">
+					<input type="text" placeholder="搜索歌曲,专辑,MV"><a href="#">搜索</a>
+				</div>
+				<div class="h-login">
+					<a class="l_login" href="#">登录</a><span>|</span><a class="l_register" href="#">注册</a>
+				</div>
+			</div>
+		</div>
+		</div>
+	<!--顶部结束-->
+
+	<!--主体部分开始-->
+	<div class="main">
+		<!--主体头部部分开始-->
+		<div class="head">
+			<div class="head-left">全部</div>
+			<div class="head-right">
+				<ul>
+					<li><a href="#">推荐</a></li>
+					<li><a href="#">最新</a></li>
+					<li><a href="#">最热</a></li>
+					<li><a href="#">好评</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--主体头部部分结束-->
+
+		<!--主体左边部分开始-->
+		<div class="left">
+			<div class="left-list">[热门]
+				<ul>
+					<a href="#"><li>中国风</li></a>
+					<a href="#"><li>网络</li></a>
+					<a href="#"><li>舞曲</li></a>
+					<a href="#"><li>钢琴</li></a>
+					<a href="#"><li>经典</li></a>
+					<a href="#"><li>小清新</li></a>
+					<a href="#"><li>DJ热碟</li></a>
+					<a href="#"><li>电视主题曲</li></a>
+				</ul>
+			</div>
+			<div class="left-list">[语言]
+				<ul>
+					<a href="#"><li>国语</li></a>
+					<a href="#"><li>粤语</li></a>
+					<a href="#"><li>英语</li></a>
+					<a href="#"><li>韩语</li></a>
+					<a href="#"><li>日语</li></a>
+					<a href="#"><li>小语种</li></a>
+					<a href="#"><li>闽南语</li></a>
+				</ul>
+			</div>	
+			<div class="left-list">[心情]
+				<ul>
+					<a href="#"><li>想哭</li></a>
+					<a href="#"><li>忧伤</li></a>
+					<a href="#"><li>寂寞</li></a>
+					<a href="#"><li>思念</li></a>
+					<a href="#"><li>安静</li></a>
+					<a href="#"><li>浪漫</li></a>
+					<a href="#"><li>激情</li></a>
+					<a href="#"><li>幸福</li></a>
+					<a href="#"><li>励志</li></a>
+					<a href="#"><li>感动</li></a>
+				</ul>
+			</div>
+			<div class="left-list">[流派]
+				<ul>
+					<a href="#"><li>流行</li></a>
+					<a href="#"><li>摇滚</li></a>
+					<a href="#"><li>乡村</li></a>
+					<a href="#"><li>电子</li></a>
+					<a href="#"><li>嘻哈</li></a>
+					<a href="#"><li>爵士</li></a>
+					<a href="#"><li>古典</li></a>
+					<a href="#"><li>R&B</li></a>
+					<a href="#"><li>纯音乐</li></a>
+				</ul>
+			</div>
+			<div class="left-list">[场景]
+				<ul>
+					<a href="#"><li>酒吧</li></a>
+					<a href="#"><li>夜店</li></a>
+					<a href="#"><li>分手</li></a>
+					<a href="#"><li>校园</li></a>
+					<a href="#"><li>咖啡厅</li></a>
+					<a href="#"><li>婚礼</li></a>
+					<a href="#"><li>运动</li></a>
+					<a href="#"><li>汽车音乐</li></a>
+				</ul>
+			</div>
+		</div>
+		<!--主体左边部分结束-->
+
+		<!--主体右边部分开始-->
+		<div class="right">
+			<div class="right-top">
+				<span class="a"><div class="right-top-list">
+					<img src="images/1.jpg" width="225px" height="200px"/>
+					<a href="#">愿有人陪你颠沛流离</a>
+					<p>rookie</p>
+				</div></span>
+				<div class="right-top-list">
+					<img src="images/2.jpg" width="225px" height="200px"/>
+					<a href="#">原来我也害怕孤单</a>
+					<p>rookie</p>
+				</div>
+				<div class="right-top-list">
+					<img src="images/3.jpg" width="225px" height="200px"/>
+					<a href="#">只想找到属于我的故事</a>
+					<p>rookie</p>
+				</div>
+				<div class="right-top-list">
+					<img src="images/4.jpg" width="225px" height="200px"/>
+					<a href="#">人聚人散，花谢花开</a>
+					<p>rookie</p>
+				</div>
+			</div>
+			<div class="right-bottom">
+				<div class="right-bottom-top">
+					<p>曲目列表</p>
+					<a href="#"><img src="images/2.png"/></a>
+					
+				</div>
+				<div class="right-bottom-list">
+					<input type="checkbox">
+					<p>全选</p>
+				</div>
+				<div class="right-bottom-list"><input type="checkbox" width="16px" height="16px"><p>1</p></div>
+				<div class="right-bottom-list"><input type="checkbox" width="16px" height="16px"><p>1</p></div>
+				<div class="right-bottom-list"><input type="checkbox" width="16px" height="16px"><p>1</p></div>
+				<div class="right-bottom-list"><input type="checkbox" width="16px" height="16px"><p>1</p></div>
+				<div class="right-bottom-list"><input type="checkbox" width="16px" height="16px"><p>1</p></div>
+				<div class="right-bottom-list"><input type="checkbox" width="16px" height="16px"><p>1</p></div>
+				<div class="right-bottom-list"><input type="checkbox" width="16px" height="16px"><p>1</p></div>
+				<div class="right-bottom-list1">
+					<ul>
+						<li><p><a href="#">首页</a></p></li>
+						<li><p><a href="#">上一页</a></p></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+						<li><a href="#">8</a></li>
+						<li><p><a href="#">下一页</a></p></li>
+						<li><p><a href="#">尾页</a></p></li>
+						<li><p>第</p></li>
+						<li><input type="text"></li>
+						<li><p>页</p></li>
+						<li><a href="#"><img src="images/3.png"/></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--主体右边部分结束-->
+	</div>
+	<!--主体部分结束-->
+	<div class="bottom"><p>Copyright © 2015-2018 www.mcmusic.com All Rights Reserved 版权所有：江西师范大学mc音乐网 备案号：赣ICP备15014315号-1</p></div>
+ </body>
+</html>

@@ -1,0 +1,394 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>mc音乐网</title>
+
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			a{text-decoration:none;}
+			li{list-style:none;}
+			body{font-size:12px;font-family:"微软雅黑";color:#bbb;background:#fff;}
+
+			/*mc start*/
+			#mc{width:100%;height:600px;}
+
+			/*m-top start*/
+			#mc .m-top{width:100%;height:50px;background:rgba(0,0,0,.8);}
+			#mc .m-top .t-head{width:1300px;height:50px;margin:0 auto;}
+			#mc .m-top .t-head .h-logo{width:200px;height:50px;float:left;}
+			#mc .m-top .t-head .h-logo img{border:0;display:block;width:126px;height:30px;margin: 10px 0 0 36px;}
+			#mc .m-top .t-head .h-nav{width:600px;height:50px;float:left;}
+			#mc .m-top .t-head .h-nav ul li{float:left;height:50px;font-size:16px;line-height:50px;
+			margin-left:15px;margin-right:15px;text-align:center;position:relative;}
+			#mc .m-top .t-head .h-nav .n-xiala1{width:400px;height:50px;background:#8c8c8c;position:absolute;top:50px;left:0;display:none;}
+			#mc .m-top .t-head .h-nav .n-xiala2{width:200px;height:50px;background:#8c8c8c;position:absolute;top:50px;left:0;display:none;}
+			#mc .m-top .t-head .h-nav .n-xiala ul{height:50px;margin:0 auto;}
+			#mc .m-top .t-head .h-nav ul li a{color:#fff;}
+			#mc .m-top .t-head .h-nav ul li .a{color:#d7d7d7;display:block;height:50px;}
+			#mc .m-top .t-head .h-nav ul li .a:hover{background:#414141;color:#fff;}
+			#mc .m-top .t-head .h-nav ul li:hover .n-xiala1{display:block;z-index:999;}
+			#mc .m-top .t-head .h-nav ul li:hover .n-xiala2{display:block;z-index:999;}
+			#mc .m-top .t-head .h-search{width:300px;height:50px;float:left;}
+			#mc .m-top .t-head .h-search input{width:210px;height:30px;border:0px;outline:none;float:left;margin-top:10px;padding-left:10px;}
+			#mc .m-top .t-head .h-search a{font-size:14px;color:#fff;display:block;width:80px;height:30px;float:left;
+			background:#99cccc;text-align:center;line-height:30px;margin-top:10px;}
+			#mc .m-top .t-head .h-login{width:86px;height:50px;float:right;}
+			#mc .m-top .t-head .h-login a{width:40px;height:50px;display:block;color:#d7d7d7;font-size:14px;line-height:50px;text-align:center;}
+			#mc .m-top .t-head .h-login a:hover{color:#fff;}
+			#mc .m-top .t-head .h-login .l_login{float:left;}
+			#mc .m-top .t-head .h-login .l_register{float:right;}
+			#mc .m-top .t-head .h-login span{color:#fff;line-height:50px;}
+
+			/*m-banner start*/
+			#mc .m-banner{width:100%;height:600px;}
+			#mc .m-banner ul li img{width:100%;height:600px;position:absolute;}
+
+			/*#d2d2d2*/
+
+			/*m-content start*/
+			#mc .m-content{width:1300px;height:1514px;background:#fff;margin:60px auto 0 auto;}
+
+			/*c-music start*/
+			#mc .m-content .c-music{width:1300px;height:326px;}
+			#mc .m-content .c-music .c-music-top{width:100%;height:50px;}
+			#mc .m-content .c-music .c-music-top .left{width:200px;height:50px;float:left;color:#000;font-size:26px;}
+			#mc .m-content .c-music .c-music-top .right{width:200px;height:50px;float:right;font-size:14px;text-align:center;}
+			#mc .m-content .c-music .c-music-top .right a{margin-top:16px;display:block;width:50px;height:20px;color:#2a2a2a;
+			float:left;border-left:1px solid #bbb;}
+			#mc .m-content .c-music .c-music-top .right a:hover{background:#390;color:#fff;}
+			#mc .m-content .c-music .c-music-top .right span{color:#000;line-height:50px;}
+			#mc .m-content .c-music .c-music-bottom{width:100%;height:276px;}
+			#mc .m-content .c-music .c-music-bottom .b-left{width:722px;height:273px;border:1px solid #d8d8d8;padding:2px;float:left;cursor:pointer;}
+			#mc .m-content .c-music .c-music-bottom .b-left:hover{box-shadow:0px 0px 6px #390;}
+			#mc .m-content .c-music .c-music-bottom .b-left .title{width:218px;height:180px;float:right;padding:10px;}
+			#mc .m-content .c-music .c-music-bottom .b-left .title h2{color:#333;font-size:18px;font-weight:300;}
+			#mc .m-content .c-music .c-music-bottom .b-left .title a{color:#390;line-height:30px;}
+			#mc .m-content .c-music .c-music-bottom .b-left .title p{color:#5e5e5e;line-height:20px;}
+			#mc .m-content .c-music .c-music-bottom .b-left .title span{color:#390;}
+			#mc .m-content .c-music .c-music-bottom .b-right{width:504px;height:273px;float:right;}
+			#mc .m-content .c-music .c-music-bottom .b-right ul li{float:left;width:240px;height:124px;border:1px solid #d8d8d8;padding:2px;}
+
+			/*c-mv start*/
+			#mc .m-content .c-mv{width:1300px;height:326px;margin-top:60px;}
+			#mc .m-content .c-mv .c-mv-top{width:100%;height:50px;}
+			#mc .m-content .c-mv .c-mv-top .left{width:200px;height:50px;float:left;color:#000;font-size:26px;}
+			#mc .m-content .c-mv .c-mv-top .right{width:200px;height:50px;float:right;font-size:14px;text-align:center;}
+			#mc .m-content .c-mv .c-mv-top .right a:hover{background:#390;color:#fff;}
+			#mc .m-content .c-mv .c-mv-bottom .b-left{width:722px;height:273px;border:1px solid #d8d8d8;padding:2px;float:left;cursor:pointer;}
+			#mc .m-content .c-mv .c-mv-bottom .b-left:hover{box-shadow:0px 0px 6px #390;}
+			#mc .m-content .c-mv .c-mv-bottom .b-left .title{width:218px;height:180px;float:right;padding:10px;}
+			#mc .m-content .c-mv .c-mv-bottom .b-left .title h2{color:#333;font-size:18px;font-weight:300;}
+			#mc .m-content .c-mv .c-mv-bottom .b-left .title a{color:#390;line-height:30px;}
+			#mc .m-content .c-mv .c-mv-bottom .b-left .title p{color:#5e5e5e;line-height:20px;}
+			#mc .m-content .c-mv .c-mv-bottom .b-left .title span{color:#390;}
+			#mc .m-content .c-mv .c-mv-top .right{width:200px;height:50px;float:right;font-size:14px;text-align:center;}
+			#mc .m-content .c-mv .c-mv-top .right a{margin-top:16px;display:block;width:50px;height:20px;color:#2a2a2a;
+			float:left;border-left:1px solid #bbb;}
+			#mc .m-content .c-mv .c-mv-top .right span{color:#000;line-height:50px;}
+			#mc .m-content .c-mv .c-mv-bottom{width:100%;height:276px;}
+			#mc .m-content .c-mv .c-mv-bottom .b-left{width:722px;height:273px;border:1px solid #d8d8d8;padding:2px;float:left;}
+			#mc .m-content .c-mv .c-mv-bottom .b-right{width:504px;height:273px;float:right;}
+			#mc .m-content .c-mv .c-mv-bottom .b-right ul li{float:left;width:240px;height:124px;border:1px solid #d8d8d8;padding:2px;}
+
+			/*c-news start*/
+			#mc .m-content .c-news{width:1300px;height:326px;margin-top:60px;}
+			#mc .m-content .c-news .c-news-top{width:100%;height:50px;}
+			#mc .m-content .c-news .c-news-top .left{width:200px;height:50px;float:left;color:#000;font-size:26px;}
+			#mc .m-content .c-news .c-news-top .right{width:100px;height:50px;float:right;font-size:14px;text-align:center;}
+			#mc .m-content .c-news .c-news-top .right a{margin-top:16px;display:block;width:50px;height:20px;color:#2a2a2a;
+			float:left;border-left:1px solid #bbb;}
+			#mc .m-content .c-news .c-news-top .right span{color:#000;line-height:50px;}
+			#mc .m-content .c-news .c-news-bottom{width:100%;height:276px;}
+			#mc .m-content .c-news .c-news-bottom .b-left{width:468px;height:273px;border:1px solid #d8d8d8;padding:2px;float:left;}
+			#mc .m-content .c-news .c-news-bottom .b-right{width:750px;height:273px;float:right;}
+			#mc .m-content .c-news .c-news-bottom .b-right ul .r-content{width:220px;height:273px;float:left;margin-right:30px;
+			padding:2px;border:1px solid #d8d8d8;}
+			#mc .m-content .c-news .c-news-bottom .b-right ul .r-content ul li{width:220px;height:29px;border-bottom:1px solid #e8e8e8;}
+			#mc .m-content .c-news .c-news-bottom .b-right ul .r-content ul li a{width:220px;height:29px;text-overflow:ellipsis;
+			display:block;color:#000;overflow:hidden;white-space: nowrap;line-height:29px;}
+
+			/*c-menu start*/
+			#mc .m-content .c-menu{width:1300px;height:326px;margin-top:60px;}
+			#mc .m-content .c-menu .c-menu-top{width:100%;height:50px;}
+			#mc .m-content .c-menu .c-menu-top .left{width:200px;height:50px;float:left;color:#000;font-size:26px;}
+			#mc .m-content .c-menu .c-menu-top .right{width:100px;height:50px;float:right;font-size:14px;text-align:center;}
+			#mc .m-content .c-menu .c-menu-top .right a{margin-top:16px;display:block;width:50px;height:20px;color:#2a2a2a;
+			float:left;border-left:1px solid #bbb;}
+			#mc .m-content .c-menu .c-menu-top .right span{color:#000;line-height:50px;}
+			#mc .m-content .c-menu .c-menu-bottom{width:100%;height:276px;}
+			#mc .m-content .c-menu .c-menu-bottom ul li{width:220px;height:280px;border:1px solid #d8d8d8;float:left;margin-right:42px;padding:2px;}
+
+			/*m-footer start*/
+			#mc .m-footer{width:100%;height:200px;margin-top:60px;}
+			#mc .m-footer .f-contact{width:100%;height:180px;background:#e6e6e6;}
+			#mc .m-footer .f-contact .c-content{width:1282px;height:180px;margin:0 auto;}
+			#mc .m-footer .f-contact .c-content .join{width:320px;height:180px;float:left;}
+			#mc .m-footer .f-contact .c-content .join i{width:34px;height:34px;background:url("images/icon1.png");display:inline-block;
+			background-position:0 0;margin:70px 0 0 90px;}
+			#mc .m-footer .f-contact .c-content .join .box{width:150px;height:80px;float:right;margin-top:55px;line-height:20px;}
+			#mc .m-footer .f-contact .c-content .join .box a{color:#bbb;}
+			#mc .m-footer .f-contact .c-content .weixin{width:320px;height:180px;float:left;}
+			#mc .m-footer .f-contact .c-content .weixin i{width:34px;height:34px;background:url("images/icon1.png");display:inline-block;
+			background-position:-37px 0;margin:70px 0 0 90px;}
+			#mc .m-footer .f-contact .c-content .weixin span{display:block;width:80px;float:right;margin:78px 100px 0 0;}
+			#mc .m-footer .f-contact .c-content .weibo{width:320px;height:180px;float:left;}
+			#mc .m-footer .f-contact .c-content .weibo i{width:34px;height:34px;background:url("images/icon1.png");display:inline-block;
+			background-position:-74px 0;margin:70px 0 0 90px;}
+			#mc .m-footer .f-contact .c-content .weibo span{display:block;width:80px;float:right;margin:78px 100px 0 0;}
+			#mc .m-footer .f-contact .c-content .tel{width:320px;height:180px;float:left;}
+			#mc .m-footer .f-contact .c-content .tel i{width:34px;height:34px;background:url("images/icon1.png");display:inline-block;
+			background-position:-111px 0;margin:70px 0 0 60px;}
+			#mc .m-footer .f-contact .c-content .tel .box{width:200px;height:90px;float:right;margin-top:55px;line-height:20px;}
+			#mc .m-footer .f-banquan{width:100%;height:40px;background:#fff;}
+			#mc .m-footer .f-banquan p{color:#000;width:100%;height:40px;text-align:center;line-height:40px;}
+		</style>
+
+	</head>
+
+<body>
+	<div id="mc">
+
+		<!--m-top start-->
+		<div class="m-top">
+			<div class="t-head">
+				<div class="h-logo">
+					<a href="#"><img src="images/logo.png" alt="mc音乐网站"/></a>
+				</div>
+				<div class="h-nav">
+					<ul>
+						<li style="margin-left:60px;"><a class="a" href="#">首页</a></li>
+						<li>
+							<a class="a" href="#">音乐</a>
+							<div class="n-xiala1">
+								<ul>
+									<li><a href="#">音乐推荐</a></li>
+									<li><a href="#">歌单广场</a></li>
+									<li><a href="#">歌手</a></li>
+									<li><a href="#">专辑</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a class="a" href="#">MV</a>
+							<div class="n-xiala2">
+								<ul>
+									<li><a href="#">MV推荐</a></li>
+									<li><a href="file:///C:/Users/Administrator/Desktop/Project/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/MV%E5%BA%93/index.html#">MV库</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a class="a" href="#">音乐资讯</a></li>
+						<li><a class="a" href="#">我的音乐盒</a></li>
+						<li><a class="a" href="#">关于作者</a></li>
+					</ul>
+				</div>
+				<div class="h-search">
+					<input type="text" placeholder="搜索歌曲，专辑，MV"><a href="#">搜索</a>
+				</div>
+				<div class="h-login">
+					<a class="l_login" href="file:///C:/Users/Administrator/Desktop/Project/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2/index.html">登录</a><span>|</span><a class="l_register" href="file:///C:/Users/Administrator/Desktop/Project/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/%E6%B3%A8%E5%86%8C%E7%95%8C%E9%9D%A2/index.html">注册</a>
+				</div>
+			</div>
+		</div>
+		<!--end m-top-->
+
+		<!--m-banner start-->
+		<div class="m-banner">
+			<ul>
+				<li><a href=""><img src="images/banner/1.jpg"/></a></li>
+				<li><a href=""><img src="images/banner/2.jpg"/></a></li>
+				<li><a href=""><img src="images/banner/3.jpg"/></a></li>
+			</ul>
+		</div>
+		<!--end m-banner-->
+
+		<!--m-content start-->
+		<div class="m-content">
+			
+			<!--c-music start-->
+			<div class="c-music">
+				<div class="c-music-top">
+					<div class="left">
+						流行音乐
+					</div>
+					<div class="right">
+						<a style="border-left:0;" href="#">内地</a>
+						<a href="#">台湾</a>
+						<a href="#">韩国</a>
+						<span>>></span>
+					</div>
+				</div>
+				<div class="c-music-bottom">
+					<div class="b-left">
+						<img src="images/music/left.jpg"/>
+						<div class="title">
+							<h2>MIC性感骨盆舞</h2>
+							<p><a href="#">音悦大来宾第三季 </a><span>&</span><a href="#">MIC男团</a></p>
+							<p>近日MIC男团在节目中大跳韩国女团EXID性感舞蹈《上和下》，在韩国超火爆超sexy的“骨盆舞”，MIC跳起来又是何种风情呢?！我看这妖娆魅惑的眼神和舞姿丝毫不逊于女团本尊啊！！！</p>
+						</div>
+					</div>
+					<div class="b-right">
+						<ul>
+							<li><a href="#"><img src="images/music/1.jpg" width="240px" height="124px"/></a></li>
+							<li style="float:right;"><a href="#"><img src="images/music/2.jpg" width="240px" height="124px"/></a></li>
+							<li style="margin-top:20px;"><a href="#"><img src="images/music/3.jpg" width="240px" height="124px"/></a></li>
+							<li style="float:right;margin-top:20px;"><a href="#"><img src="images/music/4.jpg" width="240px" height="124px"/></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--end c-music-->
+
+			<!--c-mv start-->
+			<div class="c-mv">
+				<div class="c-mv-top">
+					<div class="left">
+						乐享MV
+					</div>
+					<div class="right">
+						<a style="border-left:0;" href="#">内地</a>
+						<a href="#">台湾</a>
+						<a href="#">韩国</a>
+						<span>>></span>
+					</div>
+				</div>
+				<div class="c-mv-bottom">
+					<div class="b-left">
+						<img/ src="images/mv/left.jpg">
+						<div class="title">
+							<h2>MIC性感骨盆舞</h2>
+							<p><a href="#">音悦大来宾第三季 </a><span>&</span><a href="#">MIC男团</a></p>
+							<p>近日MIC男团在节目中大跳韩国女团EXID性感舞蹈《上和下》，在韩国超火爆超sexy的“骨盆舞”，MIC跳起来又是何种风情呢?！我看这妖娆魅惑的眼神和舞姿丝毫不逊于女团本尊啊！！！</p>
+						</div>
+					</div>
+					<div class="b-right">
+						<ul>
+							<li><a href="#"><img src="images/music/1.jpg" width="240px" height="124px"/></a></li>
+							<li style="float:right;"><a href="#"><img src="images/music/2.jpg" width="240px" height="124px"/></a></li>
+							<li style="margin-top:20px;"><a href="#"><img src="images/music/3.jpg" width="240px" height="124px"/></a></li>
+							<li style="float:right;margin-top:20px;"><a href="#"><img src="images/music/4.jpg" width="240px" height="124px"/></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--end c-mv-->
+
+			<!--c-news start-->
+			<div class="c-news">
+				<div class="c-news-top">
+					<div class="left">
+						资讯快递
+					</div>
+					<div class="right">
+						<a style="border-left:0;" href="#">更多</a>
+						<span>>></span>
+					</div>
+				</div>
+				<div class="c-news-bottom">
+					<div class="b-left"><img/ src="images/news/left.jpg"></div>
+					<div class="b-right">
+						<ul>
+							<li class="r-content">
+								<a href=""><img src="images/news/1.jpg" width="220" height="124"/></a>
+								<ul>
+									<li><a href="#">【柳演锡、金智媛】所属社就两人“恋爱2年”一事作出回应</a></li>
+									<li><a href="#">【Teddy、KUSH】设立YG独立商标厂牌</a></li>
+									<li><a href="#">【CNBLUE】与比利时艺术家合作，特别版专辑封面公开</a></li>
+									<li><a href="#">【Super Junior 东海、银赫、晟敏】旧照公开，青葱少年</a></li>
+									<li><a href="#">【少女时代 Sunny、SHINee KEY、EXO SUHO】将出演《Hidden Singer4</a></li>
+								</ul>
+							</li>
+							<li class="r-content"><a href=""><img src="images/news/2.jpg"/></a>
+								<ul>
+									<li><a href="#">【柳演锡、金智媛】所属社就两人“恋爱2年”一事作出回应</a></li>
+									<li><a href="#">【Teddy、KUSH】设立YG独立商标厂牌</a></li>
+									<li><a href="#">【CNBLUE】与比利时艺术家合作，特别版专辑封面公开</a></li>
+									<li><a href="#">【Super Junior 东海、银赫、晟敏】旧照公开，青葱少年</a></li>
+									<li><a href="#">【少女时代 Sunny、SHINee KEY、EXO SUHO】将出演《Hidden Singer4</a></li>
+								</ul>
+							</li>
+							<li class="r-content" style="margin-right:0px;"><a href=""><img src="images/news/3.jpg"/></a>
+								<ul>
+									<li><a href="#">【柳演锡、金智媛】所属社就两人“恋爱2年”一事作出回应</a></li>
+									<li><a href="#">【Teddy、KUSH】设立YG独立商标厂牌</a></li>
+									<li><a href="#">【CNBLUE】与比利时艺术家合作，特别版专辑封面公开</a></li>
+									<li><a href="#">【Super Junior 东海、银赫、晟敏】旧照公开，青葱少年</a></li>
+									<li><a href="#">【少女时代 Sunny、SHINee KEY、EXO SUHO】将出演《Hidden Singer4</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--end c-news-->
+
+			<!--c-menu start-->
+			<div class="c-menu">
+				<div class="c-menu-top">
+					<div class="left">
+						精品乐单
+					</div>
+					<div class="right">
+						<a style="border-left:0;" href="#">更多</a>
+						<span>>></span>
+					</div>
+				</div>
+				<div class="c-menu-bottom">
+					<ul>
+						<li><a href="#"><img src="images/menu/1.jpg"/></a></li>
+						<li><a href="#"><img src="images/menu/2.jpg"/></a></li>
+						<li><a href="#"><img src="images/menu/3.jpg"/></a></li>
+						<li><a href="#"><img src="images/menu/4.jpg"/></a></li>
+						<li style="margin-right:0;"><a href="#"><img src="images/menu/5.jpg"/></a></li>
+					</ul>
+				</div>
+			</div>
+			<!--end c-news-->
+		</div>
+		<!--end m-content-->
+
+		<!--m-footer start-->
+		<div class="m-footer">
+			<div class="f-contact">
+				<div class="c-content">
+					<div class="join">
+						<i></i>
+						<div class="box">
+							<p><a href="#">了解MC</a></p>
+							<p><a href="#">加入MC</a></p>
+							<p><a href="#">联系我们</a></p>
+						</div>
+					</div>
+					<div class="weixin">
+						<i></i><span>关注官方微信</span>
+					</div>
+					<div class="weibo">
+						<i></i><span>关注官方微博</span>
+					</div>
+					<div class="tel">
+						<i></i>
+						<div class="box">
+							<p>联系Q Q：1278413504</p>
+							<p>联系caca：18702515162</p>
+							<p>周一至六9:30-23:00[仅收市话费]</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="f-banquan">
+				<p>Copyright © 2015-2018 www.mcmusic.com All Rights Reserved 版权所有：江西师范大学mc音乐网 备案号：赣ICP备15014315号-1</p>
+			</div>
+		</div>
+		<!--end m-footer-->
+
+	</div>
+
+
+</body>
+
+</html>

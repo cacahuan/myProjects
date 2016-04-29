@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="caca" content="">
+  <title>我的音乐盒</title>
+ </head>
+ <style type="text/css">
+	*{margin:0;padding:0;}
+	a{text-decoration:none;color:#454545;outline:none;}
+	li{list-style:none;}
+	body{font-size:15px;font-family:"微软雅黑";color:#707070;background:url("images/6.jpg")no-repeat;}
+
+	/*mc start*/
+	#mc{width:100%;height:1000px;}
+	/*m-top start*/
+	#mc .m-top{width:100%;height:50px;background:rgba(0,0,0,1);}
+	#mc .m-top .t-head{width:1300px;height:50px;margin:0 auto;}
+	#mc .m-top .t-head .h-logo{width:200px;height:50px;float:left;}
+	#mc .m-top .t-head .h-logo img{border:0;display:block;width:126px;height:30px;margin: 10px 0 0 36px;}
+	#mc .m-top .t-head .h-nav{width:600px;height:50px;float:left;}
+	#mc .m-top .t-head .h-nav ul li{float:left;height:50px;font-size:16px;line-height:50px;
+	margin-left:15px;margin-right:15px;text-align:center;position:relative;}
+	#mc .m-top .t-head .h-nav .n-xiala1{width:400px;height:50px;background:#8c8c8c;position:absolute;top:50px;left:0;display:none;}
+	#mc .m-top .t-head .h-nav .n-xiala2{width:200px;height:50px;background:#8c8c8c;position:absolute;top:50px;left:0;display:none;}
+	#mc .m-top .t-head .h-nav .n-xiala ul{height:50px;margin:0 auto;}
+	#mc .m-top .t-head .h-nav ul li a{color:#fff;}
+	#mc .m-top .t-head .h-nav ul li .a{color:#d7d7d7;display:block;height:50px;}
+	#mc .m-top .t-head .h-nav ul li .a:hover{background:#414141;color:#fff;}
+	#mc .m-top .t-head .h-nav ul li:hover .n-xiala1{display:block;z-index:999;}
+	#mc .m-top .t-head .h-nav ul li:hover .n-xiala2{display:block;z-index:999;}
+	#mc .m-top .t-head .h-search{width:300px;height:50px;float:left;}
+	#mc .m-top .t-head .h-search input{width:210px;height:30px;border:0px;outline:none;float:left;margin-top:10px;padding-left:10px;}
+	#mc .m-top .t-head .h-search a{font-size:14px;color:#fff;display:block;width:80px;height:30px;float:left;
+	background:#99cccc;text-align:center;line-height:30px;margin-top:10px;}
+	#mc .m-top .t-head .h-login{width:86px;height:50px;float:right;}
+	#mc .m-top .t-head .h-login a{width:40px;height:50px;display:block;color:#d7d7d7;font-size:14px;line-height:50px;text-align:center;}
+	#mc .m-top .t-head .h-login a:hover{color:#fff;}
+	#mc .m-top .t-head .h-login .l_login{float:left;}
+	#mc .m-top .t-head .h-login .l_register{float:right;}
+	#mc .m-top .t-head .h-login span{color:#fff;line-height:50px;}
+	/*left and right bottom start*/
+	#mc .left-botton,.right-botton{width:80px;height:80px;position:absolute;border-radius:40px;font-size:50px;text-align:center;
+	line-height:70px;color:#7d7d7d;background:rgba(0,0,0,.3);}
+	#mc .left-botton{margin:310px 60px;}
+	#mc .right-botton{margin:310px 1290px;}
+	#mc .left-botton a{color:rgba(255,255,255,.5);}
+	#mc .right-botton a{color:rgba(255,255,255,.5);}
+	#mc .left-botton a:hover{font-size:55px;color:rgba(255,255,255,.7);}
+	#mc .right-botton a:hover{font-size:55px;color:rgba(255,255,255,.7);}
+	/*m-main start*/
+	#mc .m-main{width:70%;height:532px;border:1px solid red;margin:40px auto;position:relative;}
+	#mc .m-main .main-top{width:100%;height:90px;}
+	#mc .m-main .main-top ul{width:260px;height:88px;float:right;border:1px solid red;margin-right:45px;}
+	#mc .m-main .main-top ul li{float:left;font-size:14px;line-height:110px;margin-right:30px;}
+	#mc .m-main .main-top ul li a:hover{color:#0099cc;}
+	#mc .m-main .song-img{width:280px;height:440px;border:1px solid red;float:left;background:rgba(255,255,255,.8);}
+	#mc .m-main .song-img img{margin-top:5px;margin-left:10px;}
+	#mc .m-main .lyric{width:680px;height:440px;border:1px solid red;float:left;}
+
+	/*m-main play start*/
+	#main{width:1000px;height:600px;border:1px solid red;margin:50px auto;
+	background: -webkit-linear-gradient(rgba(142,146,164,0),rgba(142,146,164,0.4),rgba(142,146,164,.5));}
+	#main .lbanner{width:290px;height:40px;float:right;}
+	#main .lbanner ul li{float:left;line-height:40px;padding-left:35px;font-size:13px;position:relative;}
+	#main .lbanner ul li img{margin-top:10px;position:absolute;}
+	#main .box{width:1000px;height:430px;border:1px solid red;margin-top:150px;position:absolute;}
+	#main .box .left{width:200px;height:300px;border:1px solid red;float:left;margin:40px 20px;}
+	#main .box .left .list li{width:200px;height:45px;border:1px solid red;line-height:45px;font-size:15px;text-indent:18px;
+	background:#b1adad;}
+	#main .box .left .list li a:hover{color:#3ae43f;}
+	
+	
+	#main .box .left .list li:nth-child(1){margin-top:0px;}
+	#main .box .left .list li:nth-child(2){margin-top:16px;}
+	#main .box .left .list li:nth-child(3){margin-top:16px;}
+	#main .box .left .list li:nth-child(4){margin-top:16px;}
+	#main .box .left .list li:nth-child(5){margin-top:16px;}
+
+	#main .box .right{width:670px;height:300px;border:1px solid black;float:left;margin:40px 20px;}
+	#main .box .lyric-botton{width:40px;height:25px;border-radius:7px;background:#000;float:left;margin-top:360px;}
+	#main .box .lyric-botton p{font-size:12px;line-height:25px;text-align:center;cursor:pointer;}
+	#main .box .lyric-botton p:hover{color:#fff;}
+
+	#main .box .add a{width:35px;height:35px;background:url("images/bg.png") no-repeat;background-position:-528px 7px;float:right;margin:-180px 10px;}
+
+	#main .box .delete a{width:35px;height:35px;background:url("images/bg.png") no-repeat;background-position:-528px -23px;float:right;margin:-130px 10px;}
+
+	#main .box .right ul li p{color:#000;font-size:34px; line-height:60px; text-align:center;position:absolute;z-index:-1;}
+	#main .box .right ul li img{position:absolute;z-index:1;transform:translateY(-200px);}
+
+	#main .box .botton{width:670px;height:45px;border-radius:5px;margin:350px 262px;background:#000;}
+	#main .box .botton a{display:block;background:url("images/bg.png")no-repeat;float:left;}
+	
+	#main .box .botton .b_pre{width:36px;height:28px;background-position:-69px 0;margin:-22px 421px;}
+	#main .box .botton .b_pre:hover{background-position:-69px -32px;margin:-22px 421px;}
+
+	#main .box .botton .b_next{width:36px;height:28px;background-position:-148px 0;margin:-22px 476px;}
+	#main .box .botton .b_next:hover{background-position:-148px -32px;margin:-22px 476px;}
+
+	#main .box .botton .b_style1{width:36px;height:28px;background-position:-222px 0;margin:-22px 526px;}
+	#main .box .botton .b_style1:hover{background-position:-222px -32px;margin:-22px 526px;}
+
+	#main .box .botton .b_style2{width:36px;height:28px;background-position:-252px 0;margin:-22px 567px;}
+	#main .box .botton .b_style2:hover{background-position:-252px -32px;margin:-22px 567px;}
+
+	#main .box .botton .b_style3{width:36px;height:28px;background-position:-325px -32px;margin:-22px 614px;}
+	#main .box .botton .b_style3:hover{background-position:-325px -60px;margin:-22px 614px;}
+
+	#main .box .botton audio{width:400px;}
+	#music{width:300px;height:40px;float:left;margin-top:-33px;}
+ </style>
+ <body>
+  <div id="mc">
+
+		<!--m-top start-->
+		<div class="m-top">
+			<div class="t-head">
+				<div class="h-logo">
+					<a href="#"><img src="images/logo.png" alt="mc音乐网站"/></a>
+				</div>
+				<div class="h-nav">
+					<ul>
+						<li style="margin-left:60px;"><a class="a" href="#">首页</a></li>
+						<li>
+							<a class="a" href="#">音乐</a>
+							<div class="n-xiala1">
+								<ul>
+									<li><a href="#">音乐推荐</a></li>
+									<li><a href="#">歌单广场</a></li>
+									<li><a href="#">歌手</a></li>
+									<li><a href="#">专辑</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a class="a" href="#">MV</a>
+							<div class="n-xiala2">
+								<ul>
+									<li><a href="#">MV推荐</a></li>
+									<li><a href="file:///C:/Users/Administrator/Desktop/Project/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/MV%E5%BA%93/index.html#">MV库</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a class="a" href="#">音乐资讯</a></li>
+						<li><a class="a" href="#">我的音乐盒</a></li>
+						<li><a class="a" href="#">关于作者</a></li>
+					</ul>
+				</div>
+				<div class="h-search">
+					<input type="text" placeholder="搜索歌曲,专辑,MV"><a href="#">搜索</a>
+				</div>
+				<div class="h-login">
+					<a class="l_login" href="file:///C:/Users/Administrator/Desktop/Project/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2/index.html">登录</a><span>|</span><a class="l_register" href="file:///C:/Users/Administrator/Desktop/Project/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/%E6%B3%A8%E5%86%8C%E7%95%8C%E9%9D%A2/index.html">注册</a>
+				</div>
+			</div>
+		</div>
+		<!--end m-top-->
+
+		<!--m-mian start-->
+			<div id="main">
+				<div class="lbanner">
+					<ul>
+						<li><a href="#">累计收听</a></li>
+						<li><a href="#">收藏</a></li>
+						<li><a href="#">红心</a></li>
+						<li><a href="#">升级</a></li>
+					</ul>
+				</div>
+				<!--box start-->
+				<div class="box">
+					<!--box-left start-->
+					<div class="left">
+						<ul class="list">
+							<li><a href="#">我的私人</a></li>
+							<li><a href="#">上传歌曲</a></li>
+						</ul>					
+					</div>
+					<!--box-right start-->
+					<div class="right">
+						<ul>
+							<li><p>歌词</p></li>
+						</ul>
+						<img src="images/1.jpeg" width="670px" height="300px"/>
+					</div>	
+					<div class="lyric-botton">
+							<p>歌词</p>
+					</div>
+					<div class="add"><a href="#"></a></div>
+					<div class="delete"><a href="#"></a></div>
+					<!--box-botton start-->
+					<div class="botton">
+						<a href="#" class="b_pre"></a>
+						<a href="#" class="b_next"></a>
+						<a href="#" class="b_style1"></a>
+						<a href="#" class="b_style2"></a>
+						<a href="#" class="b_style3"></a>
+						
+						<audio controls preload id="music">
+							<source src="mp3/1.mp3" type="audio/mp3">
+							<source src="mp3/2.mp3" type="audio/mp3">
+						</audio>
+						
+
+					</div>
+				</div>
+				<!--box end-->
+			</div>
+		<!--m-mian end-->
+	</div>
+ </body>
+	<!--js start-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		//"歌词"和"图片"切换代码
+		$(function(){
+			var i=1;
+			var index = 0;
+			$(".lyric-botton").click(function(){
+				//alert("aa");	
+				if(i==1){
+						$("#main .box .right img").fadeOut(1000);
+						
+						i=2;
+						a;
+						
+					}
+				});	
+			$(".lyric-botton").click(function(){
+				//alert("aa");	
+				if(i==2){
+						$("#main .box .right img").fadeIn(1000);
+
+						i=1;
+
+						}
+				});	
+			
+		});
+
+			//歌词变色部分
+			var text = $("#main .box .lyric").text();//获取歌词
+			var textArr = text.split("[");//用"["进行分割
+			var html = "";
+			for(var i=1;i<textArr.length;i++){
+				var timeAndgc = textArr[i].split("]");
+				var time = timeAndgc[0];
+				var gc = timeAndgc[1];
+
+				//分割出时间
+				var s = time.split(".")  //按照.分割出 分钟：秒，毫秒	
+				var hs = s[1];//分割出的毫秒
+				var f = s[0].split(":")//按照：分割出  分钟，秒
+				var _ms = f[0]*60+f[1]*1;//把分钟全部换成秒
+
+				html=html+"<p id="+_ms+">"+gc+"</p>";
+
+			}
+			if(html){
+				$("#gc").html(html);
+			}
+			//$("#music").get(0).play();  //打开网页页面就开始播放音乐
+			$("#music").get(0).addEventListener("timeupdate",function(){  //addeventlistenter 监听事件
+				var timer = this.currentTime;//获得播放的时间的秒数
+				var  s = parseInt(timer);
+				//开始让歌词跟着播放的进度变颜色
+					for(var i=0;i<s;i++){
+					$("#"+i).css("color","red");
+				}
+			});
+	</script>
+ 
+ 
+</html>
